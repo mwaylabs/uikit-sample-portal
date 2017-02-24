@@ -1,0 +1,12 @@
+// Only import styles here
+// Do not define any styles here
+// Global styles belong into main/styles/main.styles
+
+@import "compass/css3";
+@import "variables";
+@import "../bower-components/font-awesome/scss/font-awesome";
+@import "../bower-components/sass-bootstrap/lib/bootstrap";
+@import "../bower-components/mw-uikit/src/mw_ui";
+
+@import "modules/main/main";
+@import "modules/start/start";

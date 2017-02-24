@@ -1,0 +1,8 @@
+// Overriding Bootstraps defaults
+
+$brand-primary: #52576e;
+$input-border-focus: $brand-primary;
+
+$border-radius-base: 2px;
+$border-radius-large: 0;
+$border-radius-small: 0 !important;

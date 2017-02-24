@@ -1,0 +1,18 @@
+{
+  "main": {
+    "menu": {
+      "start": "Start View"
+    },
+    "errors": {
+      "resourceNotFound": {
+        "singular": "Die von Ihnen angefragt Resource konnte nicht gefunden werden!",
+        "plural": "{{$count}} Resourcen die von Ihnen angefragt wurden konnten nicht gefunden werden!"
+      }
+    },
+    "newPortalVersion": {
+      "title": "Neue App Version Verfügbar!",
+      "body": "Gute Nachrichten, eine neue MW-UI Portal Version steht für Sie bereit!",
+      "action": "Starten Sie die Applikation erneut um diese zu erhalten"
+    }
+  }
+}
