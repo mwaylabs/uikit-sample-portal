@@ -91,12 +91,17 @@
     </div>
 
 
-    <div rln-append-class-according-to-route class="view-holder module-page">
+    <div mw-append-route-class class="view-holder module-page">
       <div ng-view class="height-inherit" autoscroll="true"></div>
       <div mw-view-change-loader></div>
     </div>
 
-    <footer></footer>
+    <footer>
+      © 2014-{{ctrl.getCurrentYear()}} by <a href="http://mwaysolutions.com" target="_blank">M-Way Solutions</a>
+      <span class="pull-right">
+        {{ctrl.getAppversion()}}
+      </span>
+    </footer>
 
   </div>
 
@@ -137,7 +142,9 @@
 <script src="app/modules/main/main.routes.js"></script>
 
 <script src="app/modules/main/controllers/main.controller.js"></script>
+<script src="app/modules/main/controllers/not-found.controller.js"></script>
 
+<script src="app/modules/main/services/config.service.js"></script>
 <script src="app/modules/main/services/js-exception-handler.service.js"></script>
 
 <!-- Start module -->

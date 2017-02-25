@@ -3,4 +3,14 @@ body{
   .app{
     margin: 0 1.5em;
   }
+
+  footer{
+    position: fixed;
+    bottom: 0;
+    background: #eee;
+    font-size: 10px;
+    padding: 5px 10px;
+    width: 100%;
+    left: 0;
+  }
 }
