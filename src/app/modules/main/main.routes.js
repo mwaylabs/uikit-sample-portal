@@ -1,6 +1,13 @@
 angular.module('mwPortal.Main')
-  // All routes for this module should be defined in a sep
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {redirectTo: '/start'});
+      .when('/not-found', {
+        templateUrl: 'app/modules/main/templates/not-found.template.html',
+        controller: 'MainNotFoundController',
+        controllerAs: 'ctrl',
+        cssClasses: 'main not-found'
+      })
+      .when('/', {redirectTo: '/start'})
+      .otherwise({redirectTo: '/not-found'});
+
   });

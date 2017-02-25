@@ -1,0 +1,51 @@
+.not-found{
+
+}
+
+.not-found-container{
+  display: flex;
+  height: calc(100vh - 200px);
+  position: relative;
+  justify-content: center;
+  padding: 10%;
+  align-items: center;
+
+  .mw-icon i{
+    font-size: 40vw;
+    color: lighten($brand-primary, 50%)
+  }
+
+  .speech-bubble{
+    margin-left: 50px;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+
+    &:after{
+      content: "";
+      position: absolute;
+      left: -22px;
+      bottom: 31px;
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-right: 20px solid $brand-primary;
+    }
+  }
+
+  @media (max-width: $screen-sm) {
+    .mw-icon i{
+      display: none;
+    }
+
+    .speech-bubble{
+      margin: 0;
+
+      &:after{
+        display: none;
+      }
+    }
+  }
+}
