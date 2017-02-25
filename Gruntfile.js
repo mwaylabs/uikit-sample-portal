@@ -7,6 +7,32 @@
     // load all grunt tasks
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
+    var getVersionFromPackageJson = function () {
+      var packageJSON = grunt.file.readJSON('./package.json');
+      return packageJSON.version;
+    };
+
+    var setConfigVars = function (filePath, configObj) {
+
+      filePath = grunt.template.process(filePath);
+
+      if(grunt.file.expand(filePath).length>0){
+        filePath = grunt.file.expand(filePath)[0];
+
+        var configJSON = grunt.file.readJSON(filePath);
+
+        for (var key in configObj) {
+          if (configObj.hasOwnProperty(key) && configJSON[key]) {
+            configJSON[key] = configObj[key];
+          }
+        }
+        grunt.file.write(filePath, JSON.stringify(configJSON));
+      } else {
+        grunt.log.error('Config file could not be found!');
+      }
+
+    };
+
     // configurable paths
     var config = {
       src: 'src/',
@@ -221,7 +247,7 @@
                   '*.*',
                   'app/modules/**/images/{,*/}*',
                   'app/modules/**/assets/{,*/}*',
-                  'app/modules/**/{,*/}*.json',
+                  'app/**/{,*/}*.json',
                   'images/**/{,*/}*',
                   'assets/**/{,*/}*',
                   'fonts/**/{,*/}*'
@@ -302,46 +328,54 @@
       }
     );
 
+    grunt.registerTask('setConfigVars', 'Set variables in config.json', function () {
+      var packageVersion = getVersionFromPackageJson();
+      setConfigVars('<%= config.tmp %>/app/config.json', {
+        env: 'PRODUCTION',
+        version: packageVersion
+      });
+    });
+
     grunt.registerTask('serve', [
-      'copy:fonts',
-      'clean:server',
-      'compass:server',
-      'configureProxies:server',
-      'connect:server',
-      'watch'
+      'copy:fonts', // this is needed for external fonts that were installed via bower like font-awesome
+      'clean:server', // remove all prevous build files
+      'compass:server', // compile sass to css
+      'connect:server', //start a local server that is serving your files (localhost:9000)
+      'watch' // watch files and recompile sass too css and reload page
     ]);
 
     grunt.registerTask('test', [
-      'jshint'
+      'jshint' // lint all javascript files of your project if they match the settings defined in the .jshintrc
     ]);
 
     grunt.registerTask('prepareBuild', [
-      'clean:tmp',
-      'clean:dist',
-      'copy:fonts',
-      'copy:portalToTmpFolder'
+      'clean:tmp', // clean previous build files
+      'clean:dist', // clean previous build files
+      'copy:fonts', // this is needed for external fonts that were installed via bower like font-awesome
+      'copy:portalToTmpFolder', // copy the whole src folder into tmp for the build step
+      'setConfigVars' // Set config vars like current version number from package.json, env, etc
     ]);
 
     grunt.registerTask('buildTmpFolder', [
-      'compass:build',
-      'useminPrepare',
-      'imagemin',
-      'concat',
-      'ngtemplates',
-      'ngAnnotate:dist',
-      'uglify',
-      'copy:buildToDist',
-      'cssmin',
-      'rev:dist',
-      'manifest',
-      'replace:addCacheManifest',
-      'usemin',
-      'clean:tmp'
+      'compass:build', // compile sass file into css
+      'useminPrepare', // prepare dynamic configuration for concat task by parsing the index.html <!-- build x.js --> comments
+      'imagemin', // optimize images
+      'concat', // put all file group that were defined by useminPrepare into one file
+      'ngtemplates', // puts all used html files into one file so there won't be any template reqeusts to the server
+      'ngAnnotate:dist', // optimize injectors of all angular controllers so obfuscation is possible
+      'uglify', // js minfication and obfuscation
+      'copy:buildToDist', // copy output of previous task into final dist folder
+      'cssmin', // css minification
+      'rev:dist', // add cache buster to file name (hash.filename.ext)
+      'manifest', // be careful with the cache manifest. Make sure the server is not caching the index.html otherwise you will get into trouble!
+      'replace:addCacheManifest', //this task is only needed when using the manifest task
+      'usemin', // update the html file links with the links to the concated, minified files
+      'clean:tmp' // clean tmp folder
     ]);
 
     grunt.registerTask('build', [
       'prepareBuild',
-      'test:codequality',
+      'test',
       'buildTmpFolder'
     ]);
 
