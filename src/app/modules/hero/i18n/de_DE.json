@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "entityName": "Helden",
+    "name": "Name",
+    "description": "Beschreibung",
+    "tooltips": {
+      "heroName": "Die ist der Name des Heldes",
+      "buttonHelp": {
+        "nothingSelected": "Es wurde keine Held ausgewählt"
+      }
+    },
+    "index": {
+      "header": "Helden",
+      "newHero": "Held erstellen",
+      "deleteHero": "Löschen"
+    },
+    "new": {
+      "header": "Neuen Held erstellen"
+    },
+    "edit": {
+      "header": "{{name}} bearbeiten"
+    }
+  }
+}
