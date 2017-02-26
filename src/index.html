@@ -67,6 +67,11 @@
              label="{{'main.menu.start' | i18n}}"
              url="#/start">
         </div>
+
+        <div mw-menu-entry
+             label="{{'main.menu.heroes' | i18n}}"
+             url="#/heroes">
+        </div>
       </div>
 
       <div mw-menu-top-entries right="true">
@@ -131,6 +136,9 @@
 <script src="app/modules/main/main.js"></script>
 <script src="app/modules/main/main.routes.js"></script>
 
+<script src="app/modules/main/collections/mw-portal.collection.js"></script>
+<script src="app/modules/main/models/mw-portal.model.js"></script>
+
 <script src="app/modules/main/controllers/main.controller.js"></script>
 <script src="app/modules/main/controllers/not-found.controller.js"></script>
 
@@ -140,7 +148,18 @@
 <!-- Start module -->
 <script src="app/modules/start/start.js"></script>
 <script src="app/modules/start/start.routes.js"></script>
+
 <script src="app/modules/start/controllers/index.controller.js"></script>
+
+<!-- Hero module -->
+<script src="app/modules/hero/hero.js"></script>
+<script src="app/modules/hero/hero.routes.js"></script>
+
+<script src="app/modules/hero/models/hero.model.js"></script>
+<script src="app/modules/hero/collections/heroes.collection.js"></script>
+
+<script src="app/modules/hero/controllers/index.controller.js"></script>
+<script src="app/modules/hero/controllers/form.controller.js"></script>
 <!-- endbuild -->
 
 <!-- build:js modules/mw-portal.ui.min.js -->
