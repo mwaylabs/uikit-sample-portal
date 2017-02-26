@@ -26,15 +26,14 @@
     "grunt-text-replace": "~0.3.2",
     "grunt-usemin": "~2.1.1",
     "husky": "^0.13.1",
+    "json-server": "^0.9.5",
     "matchdep": "~0.1.1"
   },
   "scripts": {
     "preinstall": "npm install -g grunt && npm install -g bower && bower install",
-
     "start": "grunt serve",
     "build": "grunt build",
     "test": "grunt test",
-
     "prepush": "npm test"
   }
 }
