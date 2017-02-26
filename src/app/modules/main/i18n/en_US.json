@@ -1,7 +1,8 @@
 {
   "main": {
     "menu": {
-      "start": "Start View"
+      "start": "Start View",
+      "heroes": "Heroes"
     },
     "notFound": {
       "header": "The page does not exist",
