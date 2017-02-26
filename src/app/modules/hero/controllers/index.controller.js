@@ -6,7 +6,7 @@ angular.module('mwPortal.Hero')
       this.heroes.selectable.getSelected().secureEach(function(model){
         model.destroy();
       });
-    }
+    };
   })
 
   .constant('HeroIndexControllerResolver', {

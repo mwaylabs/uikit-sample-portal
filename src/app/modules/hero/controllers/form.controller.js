@@ -6,7 +6,7 @@ angular.module('mwPortal.Hero')
       this.hero.save().then(function(){
         $location.path('/heroes');
       });
-    }
+    };
   })
 
   .constant('HeroFormControllerResolver', {
