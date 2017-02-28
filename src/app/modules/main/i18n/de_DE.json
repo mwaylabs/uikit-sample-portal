@@ -6,7 +6,7 @@
     "notFound": {
       "header": "Die angefragte Seite existiert leider nicht",
       "descriptionL1": "Leider existiert die angefragte Seite nicht. Zumindest nicht in diesem Universum.",
-      "descriptionL2": "Sie können es entweder in einem parallel Universum suchen oder",
+      "descriptionL2": "Sie können es entweder in einem parallel Universum versuchen oder",
       "goToStart": "Zurück zur Startseite gehen"
     },
     "errors": {
