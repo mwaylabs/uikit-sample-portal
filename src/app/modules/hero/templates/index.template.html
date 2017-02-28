@@ -3,23 +3,25 @@
 
 <div class="row">
   <div class="col-md-3">
-    <a href="#/heroes/new"
-       class="btn btn-primary btn-block">
-      <span mw-icon="fa-plus-square-o"></span>
-      {{'hero.index.newHero' | i18n}}
-    </a>
+   <div mw-sidebar>
+     <a href="#/heroes/new"
+        class="btn btn-primary btn-block">
+       <span mw-icon="fa-plus-square-o"></span>
+       {{'hero.index.newHero' | i18n}}
+     </a>
 
-    <div mw-button-help>
-      <button href="#/heroes/new"
-              class="btn btn-danger btn-block"
-              ng-click="ctrl.deleteSelected()"
-              ng-disabled="ctrl.heroes.selectable.getSelected().length<1">
-        <span mw-icon="fa-trash-o"></span>
-        {{'hero.index.deleteHero' | i18n}}
-        <span mw-button-help-condition="ctrl.heroes.selectable.getSelected().length < 1"
-              mw-button-help-text="{{'hero.tooltips.buttonHelp.nothingSelected' | i18n }}"></span>
-      </button>
-    </div>
+     <div mw-button-help>
+       <button href="#/heroes/new"
+               class="btn btn-danger btn-block"
+               ng-click="ctrl.deleteSelected()"
+               ng-disabled="ctrl.heroes.selectable.getSelected().length<1">
+         <span mw-icon="fa-trash-o"></span>
+         {{'hero.index.deleteHero' | i18n}}
+         <span mw-button-help-condition="ctrl.heroes.selectable.getSelected().length < 1"
+               mw-button-help-text="{{'hero.tooltips.buttonHelp.nothingSelected' | i18n }}"></span>
+       </button>
+     </div>
+   </div>
   </div>
 
   <div class="col-md-9">
