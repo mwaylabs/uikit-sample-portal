@@ -1,11 +1,9 @@
 <form name="heroForm" mw-form-leave-confirmation class="row">
   <div mw-header
        title="{{'hero.edit.header' | i18n:{name: ctrl.hero.get('name')} }}">
-    <button class="btn btn-success"
-            ng-disabled="heroForm.$invalid"
-            ng-click="heroForm.$setPristine(); ctrl.save()">
-      Save
-    </button>
+    <div mw-form-actions
+         save="ctrl.save()"
+         cancel="ctrl.cancel()"></div>
   </div>
 
   <div class="col-md-12" ng-include="'app/modules/hero/templates/_form.template.html'"></div>

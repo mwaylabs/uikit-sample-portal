@@ -2,10 +2,18 @@ angular.module('mwPortal.Hero')
   .controller('HeroFormController', function ($location, hero) {
     this.hero = hero;
 
+    this.goBack = function(){
+      $location.path('/heroes');
+    };
+
     this.save = function(){
-      this.hero.save().then(function(){
-        $location.path('/heroes');
-      });
+      return this.hero.save().then(function(){
+        this.goBack();
+      }.bind(this));
+    };
+
+    this.cancel = function(){
+      this.goBack();
     };
   })
 
