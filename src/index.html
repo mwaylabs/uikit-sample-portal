@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="main.css">
   <!-- endbuild -->
 </head>
-<body ng-cloak class="loading">
+<body>
 
 <!--[if lt IE 10]>
 <script>
@@ -55,14 +55,10 @@
 </p>
 <![endif]-->
 
-
-<div ng-controller="MainController as ctrl" ng-cloak>
+<div ng-cloak
+     ng-controller="MainController as ctrl">
 
   <div mw-ui>
-    <header>
-      <div mw-toasts class="notifications"></div>
-    </header>
-
     <div mw-menu-top-bar>
       <img src="app/modules/main/assets/header-logo.png">
 
@@ -87,7 +83,7 @@
       </div>
     </div>
 
-    <div mw-append-route-class class="view-holder module-page">
+    <div mw-append-route-class class="view-holder">
       <div ng-view class="height-inherit" autoscroll="true"></div>
       <div mw-view-change-loader></div>
     </div>
@@ -99,8 +95,8 @@
       </span>
     </div>
   </div>
-</div>
 
+</div>
 
 <!-- build:js modules/vendors.min.js -->
 <!-- jQuery needed by bootstrap -->
