@@ -2,15 +2,10 @@
   "start": {
     "index": {
       "header": "Start View",
-      "title": "Hello {{name}}",
-      "requestResource": "Request resource that does not exist",
-      "goToAsyncPage": "Go to page with async data",
-      "invokeJsException": "Invoke JS Exception"
-    },
-    "indexAsync": {
-      "header": "Start View with async data",
-      "description": "This page demonstrates the loading spinenr that is displayed during fetching async data in the preresolver. When all prereoslver promises are resolved Angular will instantiate the controller and inject the resolved data into it.",
-      "goBack": "Go to Start"
+      "itWorksPanel": {
+        "title": "{{name}} works!",
+        "body": "The UI-Kit was set up successfully and is working!. This is a 'mw-panel' and can hold of all sort of content"
+      }
     }
   }
 }

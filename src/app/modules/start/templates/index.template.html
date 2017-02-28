@@ -3,24 +3,8 @@
 
 <div class="row">
   <div class="col-md-12">
-    <div class="well">
-      <h2>{{'start.index.title' | i18n:{name:ctrl.name} }}</h2>
-      <img src="app/modules/main/assets/header-logo.png">
-      <hr>
-      <button class="btn btn-default"
-              ng-click="ctrl.fetchUnknowRessource()">
-        {{'start.index.requestResource' | i18n}}
-      </button>
-
-      <a href="#/start-async"
-         class="btn btn-default">
-        {{'start.index.goToAsyncPage' | i18n }}
-      </a>
-
-      <button class="btn btn-danger"
-              ng-click="ctrl.invokeJsException()">
-        {{'start.index.invokeJsException' | i18n }}
-      </button>
+    <div mw-panel title="{{'start.index.itWorksPanel.title' | i18n:{name:ctrl.name} }}">
+      <p>{{'start.index.itWorksPanel.body' | i18n}}</p>
     </div>
   </div>
 </div>

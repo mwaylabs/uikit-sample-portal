@@ -2,15 +2,10 @@
   "start": {
     "index": {
       "header": "Startseite",
-      "title": "Hallo {{name}}",
-      "requestResource": "Nicht existierende Resource anfragen",
-      "goToAsyncPage": "Zu Seite mit asynchronen Daten gehen",
-      "invokeJsException": "JS Exception erzeugen"
-    },
-    "indexAsync": {
-      "header": "Startseite mit asynchronen Daten",
-      "description": "Diese Seite demonstriert den Ladebalken der angezeigt ist wenn asynchrone Daten im Preresolver des Controllers geladen werden. Der Controller wird von Angular erst instantiert wenn alle promises des presresolvers resolved wurden.",
-      "goBack": "Zurück zu Start"
+      "itWorksPanel": {
+        "title": "{{name}} funktioniert",
+        "body": "Das Uikit wurde erfolgreich aufgesetzt und funktioniert!. Dies ist ein 'mw-panel' und kann jeglichen Text beinhalten"
+      }
     }
   }
 }
