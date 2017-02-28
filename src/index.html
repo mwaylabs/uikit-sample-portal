@@ -3,7 +3,7 @@
 <html ng-app="mwPortal" class="no-js">
 <!--<![endif]-->
 <head>
-  <title>MW Uikit</title>
+  <title>Mw Uikit</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="keywords" content="AngularJS, BackboneJS, MW-Uikit">
@@ -56,16 +56,14 @@
 <![endif]-->
 
 
-<div ng-controller="MainController as ctrl">
+<div ng-controller="MainController as ctrl" ng-cloak>
 
-  <div class="app">
-
+  <div mw-ui>
     <header>
       <div mw-toasts class="notifications"></div>
     </header>
 
     <div mw-menu-top-bar>
-
       <img src="app/modules/main/assets/header-logo.png">
 
       <div mw-menu-top-entries>
@@ -86,25 +84,21 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
 
     <div mw-append-route-class class="view-holder module-page">
       <div ng-view class="height-inherit" autoscroll="true"></div>
       <div mw-view-change-loader></div>
     </div>
 
-    <footer>
+    <div mw-footer="default">
       © 2014-{{ctrl.getCurrentYear()}} by <a href="http://mwaysolutions.com" target="_blank">M-Way Solutions</a>
       <span class="pull-right">
         {{ctrl.getAppversion()}}
       </span>
-    </footer>
-
+    </div>
   </div>
-
 </div>
 
 

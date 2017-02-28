@@ -1,37 +1,4 @@
 // All global styles should be defined here
 body{
-  .app{
-    margin: 0 1.5em;
-  }
 
-  footer{
-    position: fixed;
-    bottom: 0;
-    background: #eee;
-    font-size: 10px;
-    padding: 5px 10px;
-    width: 100%;
-    left: 0;
-  }
-
-  .btn{
-    &.btn-block{
-      .mw-icon{
-        display: inline-block;
-        left: 12px;
-        position: relative;
-        float: left;
-        top: 1px;
-      }
-    }
-    &.btn-danger{
-
-    }
-  }
-
-  .btn-block + .mw-button-help,
-  .mw-button-help +.mw-button-help,
-  .mw-button-help *.btn-block{
-    margin-top: 5px;
-  }
 }
