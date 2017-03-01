@@ -3,6 +3,7 @@
     "entityName": "Heroes",
     "name": "Name",
     "description": "Description",
+    "superPowers": "Superpowers",
     "tooltips": {
       "heroName": "This is the name of the hero. The name must be unique",
       "buttonHelp": {
