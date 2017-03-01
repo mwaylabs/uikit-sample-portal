@@ -9,6 +9,7 @@ angular.module('mwPortal.Hero')
 
   .controller('HeroDeleteConfirmModalController', function ($scope) {
     $scope.deleteSelected = function () {
+      // use .secureEach() instead of .each() otherwise you will get reference problems http://stackoverflow.com/a/22024432
       $scope.selected.secureEach(function (model) {
         model.destroy();
       });
