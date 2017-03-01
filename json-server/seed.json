@@ -1,14 +1,27 @@
 {
   "heroes": [
-    {"id": 11, "name": "Mr. Nice"},
-    {"id": 12, "name": "Narco"},
-    {"id": 13, "name": "Bombasto"},
-    {"id": 14, "name": "Celeritas"},
-    {"id": 15, "name": "Magneta"},
-    {"id": 16, "name": "RubberMan"},
-    {"id": 17, "name": "Dynama"},
-    {"id": 18, "name": "Dr IQ"},
-    {"id": 19, "name": "Magma"},
-    {"id": 20, "name": "Tornado"}
+    {"id": 11, "name": "Mr. Nice", "superPowers": [{"id": 2, "name": "Far-Sightedness"},{"id": 5, "name": "Super inteligent"}]},
+    {"id": 12, "name": "Narco", "superPowers": []},
+    {"id": 13, "name": "Bombasto", "superPowers": [{"id": 1, "name": "Fireblast"}]},
+    {"id": 14, "name": "Celeritas", "superPowers": []},
+    {"id": 15, "name": "Magneta", "superPowers": [{"id": 11, "name": "Magnetism"}]},
+    {"id": 16, "name": "RubberMan", "superPowers": [{"10": 10, "name": "Erasing"}]},
+    {"id": 17, "name": "Dynama", "superPowers": [{"id": 2, "name": "Far-Sightedness"},{"id": 5, "name": "Super inteligent"}]},
+    {"id": 18, "name": "Dr IQ", "superPowers": [{"id": 5, "name": "Super inteligent"}]},
+    {"id": 19, "name": "Magma", "superPowers": [{"id": 4, "name": "Magic"}, {"id": 6, "name": "Alchemy"}]},
+    {"id": 20, "name": "Tornado", "superPowers": [{"id": 9, "name": "Flying"}]}
+  ],
+  "super-powers": [
+    {"id": 1, "name": "Fireblast"},
+    {"id": 2, "name": "Far-Sightedness"},
+    {"id": 3, "name": "Superfast"},
+    {"id": 4, "name": "Magic"},
+    {"id": 5, "name": "Super inteligent"},
+    {"id": 6, "name": "Alchemy"},
+    {"id": 7, "name": "Undestroyable"},
+    {"id": 8, "name": "Extra lives"},
+    {"id": 9, "name": "Flying"},
+    {"10": 10, "name": "Erasing"},
+    {"id": 11, "name": "Magnetism"}
   ]
 }
