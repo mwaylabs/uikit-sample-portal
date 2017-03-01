@@ -4,7 +4,7 @@
     "name": "Name",
     "description": "Description",
     "tooltips": {
-      "heroName": "This is the name of the hero",
+      "heroName": "This is the name of the hero. The name must be unique",
       "buttonHelp": {
         "nothingSelected": "No hero has been selected"
       }
