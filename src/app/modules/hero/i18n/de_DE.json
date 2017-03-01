@@ -20,6 +20,12 @@
     "edit": {
       "header": "{{name}} bearbeiten"
     },
+    "modals": {
+      "heroDeleteConfirm": {
+        "hero": "Möchten Sie den Held \"{{name}}\" wirklich löschen?",
+        "heroes": "Möchten Sie die folgenden Helden wirklich löschen?"
+      }
+    },
     "toasts": {
       "serverResponses": {
         "success": {

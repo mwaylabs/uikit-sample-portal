@@ -20,6 +20,12 @@
     "edit": {
       "header": "Edit {{name}}"
     },
+    "modals": {
+      "heroDeleteConfirm": {
+        "hero": "Do you really want to delete the hero \"{{name}}\"?",
+        "heroes": "Do you really want to delete the following heroes?"
+      }
+    },
     "toasts": {
       "serverResponses": {
         "success": {
