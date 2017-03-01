@@ -7,6 +7,7 @@ angular.module('mwPortal', [
   'ngAnimate',
   'mwUI',
 
-  'mwPortal.Main',
-  'mwPortal.Start'
+  'mwPortal.Start',
+
+  'mwPortal.Main' // the main module should be at the end so that the configurations are executed on top of the other module configurations
 ]);
