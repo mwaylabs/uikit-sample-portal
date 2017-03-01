@@ -45,7 +45,7 @@
       }
     },
     "validators": {
-      "notUnique": "The hero does already exist"
+      "notUnique": "The hero with the name \"{{name}}\" does already exist"
     }
   }
 }

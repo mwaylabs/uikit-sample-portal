@@ -9,7 +9,7 @@ angular.module('mwPortal.Hero')
     );
   })
 
-  .directive('heroValidateUnique', function (mwValidationMessages, HeroesCollection) {
+  .directive('heroValidateUnique', function (i18n, mwValidationMessages, HeroesCollection) {
     return {
       require: 'ngModel',
       scope: {
@@ -26,9 +26,19 @@ angular.module('mwPortal.Hero')
         // the name of the validator is also used for the validation message as a key
         ngModel.$validators.heroUnique = function (value) {
           if (validateHero(value)) {
+            var existingHero = heroes.findWhere({name: value});
+            if(existingHero){
+              //We update the existing validation message so can display the name of the already existing hero
+              mwValidationMessages.updateMessage(
+                'heroUnique', // name of the validator for which you want to provide a text message
+                function(){
+                  return i18n.get('hero.validators.notUnique', {name: value});
+                }
+              );
+            }
             // When the validator returns false the ngModel becomes invalid
             // The mw-input-wrapper displays the registered error message. When no message is registered it is just red
-            return !heroes.findWhere({name: value});
+            return !existingHero;
           } else {
             return true;
           }
