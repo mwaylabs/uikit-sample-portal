@@ -19,6 +19,24 @@
     },
     "edit": {
       "header": "{{name}} bearbeiten"
+    },
+    "toasts": {
+      "serverResponses": {
+        "success": {
+          "created": {
+            "singular": "Der Held {{name}} wurde erfolgreich angelegt!",
+            "plural": "{{$count}} Helden wurden erfolgreich angelegt!"
+          },
+          "updated": {
+            "singular": "Der Held {{name}} wurde erfolgreich aktualisiert!",
+            "plural": "{{$count}} Helden wurden erfolgreich aktualisiert!"
+          },
+          "deleted": {
+            "singular": "Der Held {{name}} wurde erfolgreich gelöscht!",
+            "plural": "{{$count}} Helden wurden erfolgreich gelöscht!"
+          }
+        }
+      }
     }
   }
 }
