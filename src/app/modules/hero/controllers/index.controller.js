@@ -1,11 +1,14 @@
 angular.module('mwPortal.Hero')
-  .controller('HeroIndexController', function (heroes) {
+  .controller('HeroIndexController', function (HeroDeleteConfirmModal, heroes) {
+    var heroDeleteConfirmModal = new HeroDeleteConfirmModal();
+
     this.heroes = heroes;
 
-    this.deleteSelected = function(){
-      this.heroes.selectable.getSelected().secureEach(function(model){
-        model.destroy();
+    this.showDeleteConfirmModal = function(){
+      heroDeleteConfirmModal.setScopeAttributes({
+        selected: this.heroes.selectable.getSelected()
       });
+      heroDeleteConfirmModal.show();
     };
   })
 

@@ -13,7 +13,7 @@
      <div mw-button-help>
        <button href="#/heroes/new"
                class="btn btn-danger btn-block"
-               ng-click="ctrl.deleteSelected()"
+               ng-click="ctrl.showDeleteConfirmModal()"
                ng-disabled="ctrl.heroes.selectable.getSelected().length<1">
          <span mw-icon="fa-trash-o"></span>
          {{'hero.index.deleteHero' | i18n}}
