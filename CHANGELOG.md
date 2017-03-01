@@ -1,3 +1,7 @@
+# v0.1.1—Confirm Delete
+In order to prevent accidental loss of a data a confirm modal was added that is displayed when
+the user is hitting the delete button. Only when the modal is confirmed the model(s) will be destroyed.
+
 # v0.1.0—Add Heroes
 - Set up json-server to have a basic CRUD API
 - Configured grunt connect task to proxy all requests to the json-server
