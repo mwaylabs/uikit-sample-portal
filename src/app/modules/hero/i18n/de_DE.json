@@ -43,6 +43,9 @@
           }
         }
       }
+    },
+    "validators": {
+      "notUnique": "Der Held existiert bereits"
     }
   }
 }
