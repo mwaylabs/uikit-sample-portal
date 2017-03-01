@@ -1,7 +1,8 @@
 {
   "main": {
     "menu": {
-      "start": "Startseite"
+      "start": "Startseite",
+      "heroes": "Helden"
     },
     "notFound": {
       "header": "Die angefragte Seite existiert leider nicht",

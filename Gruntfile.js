@@ -16,7 +16,7 @@
 
       filePath = grunt.template.process(filePath);
 
-      if(grunt.file.expand(filePath).length>0){
+      if (grunt.file.expand(filePath).length > 0) {
         filePath = grunt.file.expand(filePath)[0];
 
         var configJSON = grunt.file.readJSON(filePath);
@@ -70,6 +70,7 @@
         connect: {
           options: {
             hostname: '0.0.0.0',
+            protocol: 'http',
             base: ['<%= config.src %>', '.tmp'],
             middleware: function (connect, options, defaultMiddleware) {
               return [
@@ -77,16 +78,17 @@
               ].concat(defaultMiddleware);
             }
           },
+          proxies: [
+            {
+              context: ['/api'],
+              host: '127.0.0.1',
+              port: 3000
+            }
+          ],
           server: {
             options: {
               port: 9000,
               livereload: true
-            }
-          },
-          dist: {
-            options: {
-              port: 9009,
-              base: 'dist'
             }
           }
         },
@@ -340,7 +342,8 @@
       'copy:fonts', // this is needed for external fonts that were installed via bower like font-awesome
       'clean:server', // remove all prevous build files
       'compass:server', // compile sass to css
-      'connect:server', //start a local server that is serving your files (localhost:9000)
+      'connect:server', // start a local server that is serving your files (localhost:9000)
+      'configureProxies:server', // start proxy server for api requests
       'watch' // watch files and recompile sass too css and reload page
     ]);
 

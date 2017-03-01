@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "entityName": "Heroes",
+    "name": "Name",
+    "description": "Description",
+    "tooltips": {
+      "heroName": "This is the name of the hero",
+      "buttonHelp": {
+        "nothingSelected": "No hero has been selected"
+      }
+    },
+    "index": {
+      "header": "Heroes",
+      "newHero": "Create hero",
+      "deleteHero": "Delete"
+    },
+    "new": {
+      "header": "Create a new Hero"
+    },
+    "edit": {
+      "header": "Edit {{name}}"
+    },
+    "toasts": {
+      "serverResponses": {
+        "success": {
+          "created": {
+            "singular": "The hero has been successfully created!",
+            "plural": "{{$count}} heroes have been successfully created!"
+          },
+          "updated": {
+            "singular": "The heo has been successfully updated!",
+            "plural": "{{$count}} heroes have been successfully updated!"
+          },
+          "deleted": {
+            "singular": "The hero has been successfully deleted!",
+            "plural": "{{$count}} heroes have been successfully deleted!"
+          }
+        }
+      }
+    }
+  }
+}

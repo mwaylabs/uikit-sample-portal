@@ -1,0 +1,14 @@
+<div mw-input-wrapper
+     label="{{'hero.name' | i18n}}"
+     tooltip="{{'hero.tooltips.heroName' | i18n}}">
+  <input name="name"
+         type="text"
+         ng-model="name"
+         mw-model="ctrl.hero"
+         required>
+</div>
+
+<div mw-input-wrapper
+     label="{{'hero.description' | i18n}}">
+  <textarea name="description" ng-model="description" mw-model="ctrl.hero" ng-maxlength="10"></textarea>
+</div>
