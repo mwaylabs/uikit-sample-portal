@@ -4,7 +4,7 @@
     "name": "Name",
     "description": "Beschreibung",
     "tooltips": {
-      "heroName": "Die ist der Name des Heldes",
+      "heroName": "Die ist der Name des Heldes. Der Name muss eindeutig sein",
       "buttonHelp": {
         "nothingSelected": "Es wurde keine Held ausgewählt"
       }
@@ -43,6 +43,9 @@
           }
         }
       }
+    },
+    "validators": {
+      "notUnique": "Der Held mit dem Namen \"{{name}}\" existiert bereits"
     }
   }
 }
