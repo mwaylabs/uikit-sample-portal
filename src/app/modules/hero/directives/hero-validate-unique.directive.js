@@ -26,7 +26,7 @@ angular.module('mwPortal.Hero')
         // the name of the validator is also used for the validation message as a key
         ngModel.$validators.heroUnique = function (value) {
           if (validateHero(value)) {
-            var existingHero = heroes.findWhere({name: value});
+            var existingHero = heroes.findByNameCaseInSensitive(value);
             if(existingHero){
               //We update the existing validation message so can display the name of the already existing hero
               mwValidationMessages.updateMessage(
