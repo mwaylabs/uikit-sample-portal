@@ -1,3 +1,8 @@
+# v0.1.2—Custom Validator
+- Added a custom validator directive to verify that the hero name does not already exist
+- Registered a validator message to give the user a feedback that the hero is already existing
+- Added function to hero collection to find hero by name case insensitive
+
 # v0.1.1—Confirm Delete
 In order to prevent accidental loss of a data a confirm modal was added that is displayed when
 the user is hitting the delete button. Only when the modal is confirmed the model(s) will be destroyed.
