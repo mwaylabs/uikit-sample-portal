@@ -1,3 +1,9 @@
+# v0.1.3—Super Powers
+- The heroes got super powers as a new property
+- The hero model was extended with a nested collection for the super powers
+- Selector was added in the form view to select super powers
+- json-server was extended with a new endpoint `/super-powers`
+
 # v0.1.2—Custom Validator
 - Added a custom validator directive to verify that the hero name does not already exist
 - Registered a validator message to give the user a feedback that the hero is already existing

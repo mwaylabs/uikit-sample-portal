@@ -13,3 +13,11 @@
      label="{{'hero.description' | i18n}}">
   <textarea name="description" ng-model="description" mw-model="ctrl.hero" ng-maxlength="10"></textarea>
 </div>
+
+<div mw-input-wrapper
+     label="{{'hero.superPowers' | i18n}}">
+  <div mw-checkbox-group
+       mw-collection="ctrl.hero.get('superPowers')"
+       mw-options-collection="ctrl.superPowers"
+       mw-options-label-key="name"></div>
+</div>

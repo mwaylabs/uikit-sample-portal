@@ -3,6 +3,7 @@
     "entityName": "Helden",
     "name": "Name",
     "description": "Beschreibung",
+    "superPowers": "Super Kräfte",
     "tooltips": {
       "heroName": "Die ist der Name des Heldes. Der Name muss eindeutig sein",
       "buttonHelp": {
