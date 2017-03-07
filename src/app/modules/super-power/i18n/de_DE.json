@@ -12,8 +12,8 @@
     },
     "index": {
       "header": "Superkräfte",
-      "newHero": "Superkraft erstellen",
-      "deleteHero": "Löschen"
+      "newSuperPower": "Superkraft erstellen",
+      "deleteSuperPower": "Löschen"
     },
     "new": {
       "header": "Neue Superkraft erstellen"
@@ -27,8 +27,8 @@
     },
     "modals": {
       "superPowerDeleteConfirm": {
-        "hero": "Möchten Sie die Superkraft \"{{name}}\" wirklich löschen?",
-        "heroes": "Möchten Sie die folgenden Superkräfte wirklich löschen?"
+        "superPower": "Möchten Sie die Superkraft \"{{name}}\" wirklich löschen?",
+        "superPowers": "Möchten Sie die folgenden Superkräfte wirklich löschen?"
       }
     },
     "toasts": {

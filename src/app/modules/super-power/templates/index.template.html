@@ -7,7 +7,7 @@
      <a href="#/super-powers/new"
         class="btn btn-primary btn-block">
        <span mw-icon="fa-plus-square-o"></span>
-       {{'superPower.index.newHero' | i18n}}
+       {{'superPower.index.newSuperPower' | i18n}}
      </a>
 
      <div mw-button-help>
@@ -15,7 +15,7 @@
                ng-click="ctrl.showDeleteConfirmModal()"
                ng-disabled="ctrl.superPowers.selectable.getSelected().length<1">
          <span mw-icon="fa-trash-o"></span>
-         {{'superPower.index.deleteHero' | i18n}}
+         {{'superPower.index.deleteSuperPower' | i18n}}
          <span mw-button-help-condition="ctrl.superPowers.selectable.getSelected().length < 1"
                mw-button-help-text="{{'superPower.tooltips.buttonHelp.nothingSelected' | i18n }}"></span>
        </button>

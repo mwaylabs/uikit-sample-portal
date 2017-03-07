@@ -12,8 +12,8 @@
     },
     "index": {
       "header": "Super Powers",
-      "newHero": "Create Super Power",
-      "deleteHero": "Delete"
+      "newSuperPower": "Create Super Power",
+      "deleteSuperPower": "Delete"
     },
     "new": {
       "header": "Create a new Super Power"
@@ -27,8 +27,8 @@
     },
     "modals": {
       "superPowerDeleteConfirm": {
-        "hero": "Do you really want to delete the super power \"{{name}}\"?",
-        "heroes": "Do you really want to delete the following super powers?"
+        "superPower": "Do you really want to delete the super power \"{{name}}\"?",
+        "superPowers": "Do you really want to delete the following super powers?"
       }
     },
     "toasts": {

@@ -1,10 +1,10 @@
 <div mw-modal-confirm ok="deleteSelected()">
   <div ng-if="selected.length === 1">
-    <p>{{ 'superPower.modals.superPowerDeleteConfirm.hero' | i18n:{name: selected.first().get('name')} }}</p>
+    <p>{{ 'superPower.modals.superPowerDeleteConfirm.superPower' | i18n:{name: selected.first().get('name')} }}</p>
   </div>
 
   <div ng-if="selected.length > 1">
-    <p>{{ 'superPower.modals.superPowerDeleteConfirm.heroes' | i18n }}</p>
+    <p>{{ 'superPower.modals.superPowerDeleteConfirm.superPowers' | i18n }}</p>
     <ul>
       <li ng-repeat="model in selected.models">{{ model.get('name') }}</li>
     </ul>
