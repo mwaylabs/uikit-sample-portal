@@ -1,0 +1,61 @@
+<div mw-header
+     title="{{'superPower.index.header' | i18n }}"></div>
+
+<div class="row">
+  <div class="col-md-3">
+   <div mw-sidebar>
+     <a href="#/super-powers/new"
+        class="btn btn-primary btn-block">
+       <span mw-icon="fa-plus-square-o"></span>
+       {{'superPower.index.newHero' | i18n}}
+     </a>
+
+     <div mw-button-help>
+       <button class="btn btn-danger btn-block"
+               ng-click="ctrl.showDeleteConfirmModal()"
+               ng-disabled="ctrl.superPowers.selectable.getSelected().length<1">
+         <span mw-icon="fa-trash-o"></span>
+         {{'superPower.index.deleteHero' | i18n}}
+         <span mw-button-help-condition="ctrl.superPowers.selectable.getSelected().length < 1"
+               mw-button-help-text="{{'superPower.tooltips.buttonHelp.nothingSelected' | i18n }}"></span>
+       </button>
+     </div>
+   </div>
+  </div>
+
+  <div class="col-md-9">
+    <div mw-listable-head-2
+         collection="ctrl.superPowers"
+         collection-name="{{'superPower.entityName' | i18n}}"
+         name-attribute="name"></div>
+
+    <table mw-listable-bb
+           collection="ctrl.superPowers">
+      <thead>
+      <tr mw-listable-header-row-bb>
+        <th mw-listable-header-bb
+            width="50%">
+          {{'superPower.name' | i18n}}
+        </th>
+        <th mw-listable-header-bb
+            class="hidden-xs"
+            width="50%">
+          {{'superPower.icon' | i18n}}
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr mw-listable-body-row-bb
+          ng-repeat="item in ctrl.superPowers.models">
+        <td class="primary-column">
+          <a href="#/super-powers/{{item.id}}/edit">{{ item.get('name') }}</a>
+        </td>
+        <td>
+          <span ng-if="item.get('icon')" mw-icon="{{ item.get('icon') }}"></span>
+        </td>
+        <td mw-listable-link-show-bb="#/super-powers/{{item.id}}/edit"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
