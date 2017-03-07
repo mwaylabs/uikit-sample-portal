@@ -53,7 +53,9 @@
           <a href="#/start/details">{{ item.get('name') }}</a>
         </td>
         <td>
-          {{item.get('description')}}
+          <span class="label label-default label-light" ng-repeat="superPower in item.get('superPowers').models" ng-if="superPower.get('icon')">
+            <span mw-icon="{{superPower.get('icon')}}" tooltip="{{superPower.get('name')}}"></span>
+          </span>
         </td>
         <td mw-listable-link-show-bb="#/heroes/{{item.id}}/edit"></td>
       </tr>
