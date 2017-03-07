@@ -1,0 +1,53 @@
+{
+  "superPower": {
+    "entityName": "Superkräfte",
+    "name": "Name",
+    "icon": "Icon",
+    "superPowers": "Superkräfte",
+    "tooltips": {
+      "icon": "Icon das die Superkraft repräsentiert. Es können alle icons verwendet werden die Font Awesome anbietet",
+      "buttonHelp": {
+        "nothingSelected": "Es wurde keine Superkraft ausgewählt"
+      }
+    },
+    "index": {
+      "header": "Superkräfte",
+      "newHero": "Superkraft erstellen",
+      "deleteHero": "Löschen"
+    },
+    "new": {
+      "header": "Neue Superkraft erstellen"
+    },
+    "edit": {
+      "header": "Edit {{name}}"
+    },
+    "form": {
+      "iconDesc": "Namen des Icons eingeben das verwendet werden soll. Es können alle Icons von Font Awesome verwendet werden z.B. fa-taxi",
+      "iconPreview": "Preview of the icon"
+    },
+    "modals": {
+      "superPowerDeleteConfirm": {
+        "hero": "Möchten Sie die Superkraft \"{{name}}\" wirklich löschen?",
+        "heroes": "Möchten Sie die folgenden Superkräfte wirklich löschen?"
+      }
+    },
+    "toasts": {
+      "serverResponses": {
+        "success": {
+          "created": {
+            "singular": "Die Superkraft {{name}} wurde erfolgreich angelegt!",
+            "plural": "{{$count}} Superkräfte wurden erfolgreich angelegt!"
+          },
+          "updated": {
+            "singular": "Die Superkraft {{name}} wurde erfolgreich aktualisiert!",
+            "plural": "{{$count}} Superkräfte wurden erfolgreich aktualisiert!"
+          },
+          "deleted": {
+            "singular": "Die Superkraft {{name}} wurde erfolgreich gelöscht!",
+            "plural": "{{$count}} Superkräfte wurden erfolgreich gelöscht!"
+          }
+        }
+      }
+    }
+  }
+}
