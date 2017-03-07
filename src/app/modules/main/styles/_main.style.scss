@@ -1,4 +1,45 @@
 // All global styles should be defined here
-body{
+body {
+  .mw-menu-top-bar .dropdown-menu a.active {
+    border-left: 2px solid $brand-primary;
+  }
 
+  .label + .label {
+    margin-left: 5px;
+  }
+
+  .label {
+    &.label-light {
+      background: transparent;
+      border: 1px solid;
+
+      &.label-default {
+        color: $gray-light;
+      }
+
+      &.label-primary {
+        color: $brand-primary;
+      }
+
+      &.label-success {
+        color: $brand-success;
+      }
+
+      &.label-danger {
+        color: $brand-danger;
+      }
+
+      &.label-info {
+        color: $brand-info;
+      }
+
+      &.label-warning {
+        color: $brand-warning;
+      }
+    }
+  }
+
+  input + .alert {
+    margin-top: 10px;
+  }
 }
