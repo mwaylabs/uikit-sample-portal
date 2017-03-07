@@ -1,0 +1,30 @@
+<div mw-input-wrapper
+     label="{{'superPower.name' | i18n}}">
+  <input name="name"
+         type="text"
+         ng-model="name"
+         mw-model="ctrl.superPower"
+         required>
+</div>
+
+<div mw-input-wrapper
+     label="{{'superPower.icon' | i18n}}"
+     tooltip="{{'superPower.tooltips.icon' | i18n}}">
+  <input name="name"
+         type="text"
+         ng-model="icon"
+         mw-model="ctrl.superPower">
+
+  <div mw-alert="info">
+    {{'superPower.form.iconDesc' | i18n}}
+  </div>
+
+  <div ng-if="ctrl.superPower.get('icon')">
+    <p>
+      <span>{{'superPower.form.iconPreview' | i18n}}</span>
+      <div class="label label-default label-light">
+        <span class="icon fa {{ctrl.superPower.get('icon')}}"></span>
+      </div>
+    </p>
+  </div>
+</div>
