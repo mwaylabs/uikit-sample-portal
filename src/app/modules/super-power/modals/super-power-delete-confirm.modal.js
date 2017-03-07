@@ -1,4 +1,4 @@
-angular.module('mwPortal.Hero')
+angular.module('mwPortal.SuperPower')
 
   .service('SuperPowerDeleteConfirmModal', function (Modal) {
     return Modal.prepare({
