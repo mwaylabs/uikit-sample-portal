@@ -60,7 +60,8 @@
         </td>
         <td>
           <span class="label label-default label-light" ng-repeat="superPower in item.get('superPowers').models"
-                ng-if="superPower.get('icon')">
+                ng-if="superPower.get('icon')"
+                ng-class="{'label-success': (superPower.get('id') === item.get('strongestSuperPower').get('id')) }">
             <span class="fa {{superPower.get('icon')}}" mw-tooltip="{{superPower.get('name')}}"></span>
           </span>
         </td>
