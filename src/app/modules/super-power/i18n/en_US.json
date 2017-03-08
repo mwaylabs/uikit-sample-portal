@@ -30,7 +30,16 @@
       "superPowerDeleteConfirm": {
         "superPower": "Do you really want to delete the super power \"{{name}}\"?",
         "superPowers": "Do you really want to delete the following super powers?"
+      },
+      "selector": {
+        "title": "Select a super power"
       }
+    },
+    "superPowerSelectorBtn": {
+      "selectSuperPower": "Select a super power",
+      "selectSuperPowers": "Select super powers",
+      "superPowerIsSelected": "Super power \"{{name}}\" is selected",
+      "superPowersAreSelected": "{{count}} super powers are selected"
     },
     "toasts": {
       "serverResponses": {

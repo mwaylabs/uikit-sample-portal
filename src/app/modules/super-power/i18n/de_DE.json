@@ -30,7 +30,16 @@
       "superPowerDeleteConfirm": {
         "superPower": "Möchten Sie die Superkraft \"{{name}}\" wirklich löschen?",
         "superPowers": "Möchten Sie die folgenden Superkräfte wirklich löschen?"
+      },
+      "selector": {
+        "title": "Superkraft auswählen"
       }
+    },
+    "superPowerSelectorBtn": {
+      "selectSuperPower": "Superkraft auswählen",
+      "selectSuperPowers": "Superkräfte auswählen",
+      "superPowerIsSelected": "Superkraft \"{{name}}\" wurde ausgewählt",
+      "superPowersAreSelected": "{{count}} Superkräfte wurden ausgewählt"
     },
     "toasts": {
       "serverResponses": {
