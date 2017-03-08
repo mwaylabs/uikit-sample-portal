@@ -14,6 +14,9 @@ angular.module('mwPortal.SuperPower')
           isDisabled: function () {
             // This function controls if item can be selected. If it return true it will be not selected when
             // selectAll in the collection is called and the checkboxes in the list are also disabled
+            if($scope.enabledSuperpowers && $scope.enabledSuperpowers.length>0){
+              return !$scope.enabledSuperpowers.get(this);
+            }
             return false;
           }
         };

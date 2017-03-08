@@ -4,6 +4,7 @@ angular.module('mwPortal.SuperPower')
     return {
       scope: {
         selected: '=',
+        enabledSuperpowers: '=',
         mwRequired: '=',
         mwDisabled: '='
       },
@@ -13,7 +14,8 @@ angular.module('mwPortal.SuperPower')
 
         scope.openSuperPowerSelectorModal = function(){
           superPowerSelectorModal.setScopeAttributes({
-            selected: scope.selected
+            selected: scope.selected,
+            enabledSuperpowers: scope.enabledSuperpowers
           });
           superPowerSelectorModal.show();
         };
