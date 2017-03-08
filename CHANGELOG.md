@@ -1,3 +1,8 @@
+# v0.1.4—Manage Super Powers
+- Created `super-power` module with a list and a form view to create, read, update and delete super powers
+- Added attribute icon to the super power
+- Added new column to hero list view to display the super powers by using the super power icon
+
 # v0.1.3—Super Powers
 - The heroes got super powers as a new property
 - The hero model was extended with a nested collection for the super powers
