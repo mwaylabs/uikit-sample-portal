@@ -2,7 +2,8 @@
   "main": {
     "menu": {
       "start": "Start View",
-      "heroes": "Heroes"
+      "heroes": "Heroes",
+      "superPowers": "Super Kräfte"
     },
     "notFound": {
       "header": "The page does not exist",

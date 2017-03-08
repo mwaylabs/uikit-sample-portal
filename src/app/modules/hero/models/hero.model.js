@@ -1,4 +1,4 @@
-angular.module('mwPortal.Main')
+angular.module('mwPortal.Hero')
   .service('HeroModel', function (MwPortalModel, SuperPowersCollection) {
     return MwPortalModel.extend({
       endpoint: '/heroes',
@@ -9,6 +9,9 @@ angular.module('mwPortal.Main')
         return {
           superPowers: SuperPowersCollection
         };
+      },
+      hasSuperPower: function(superPower){
+        return !!this.get('superPowers').get(superPower);
       }
     });
   });

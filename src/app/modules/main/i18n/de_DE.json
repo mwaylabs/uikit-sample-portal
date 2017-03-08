@@ -2,7 +2,8 @@
   "main": {
     "menu": {
       "start": "Startseite",
-      "heroes": "Helden"
+      "heroes": "Helden",
+      "superPowers": "Super Kräfte"
     },
     "notFound": {
       "header": "Die angefragte Seite existiert leider nicht",

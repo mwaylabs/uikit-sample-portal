@@ -1,4 +1,4 @@
-angular.module('mwPortal.Main')
+angular.module('mwPortal.Hero')
   .service('HeroesCollection', function (MwPortalCollection, HeroModel) {
     return MwPortalCollection.extend({
       endpoint: '/heroes',

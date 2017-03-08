@@ -69,8 +69,15 @@
         </div>
 
         <div mw-menu-entry
-             label="{{'main.menu.heroes' | i18n}}"
-             url="#/heroes">
+             label="{{'main.menu.heroes' | i18n}}">
+          <div mw-menu-entry
+               label="{{'main.menu.heroes' | i18n}}"
+               url="#/heroes">
+          </div>
+          <div mw-menu-entry
+               label="{{'main.menu.superPowers' | i18n}}"
+               url="#/super-powers">
+          </div>
         </div>
       </div>
 
@@ -156,9 +163,8 @@
 <script src="app/modules/hero/hero.routes.js"></script>
 
 <script src="app/modules/hero/models/hero.model.js"></script>
-<script src="app/modules/hero/models/super-power.model.js"></script>
 <script src="app/modules/hero/collections/heroes.collection.js"></script>
-<script src="app/modules/hero/collections/super-powers.collection.js"></script>
+
 
 <script src="app/modules/hero/controllers/index.controller.js"></script>
 <script src="app/modules/hero/controllers/form.controller.js"></script>
@@ -166,6 +172,19 @@
 <script src="app/modules/hero/directives/hero-validate-unique.directive.js"></script>
 
 <script src="app/modules/hero/modals/hero-delete-confirm.modal.js"></script>
+
+<!-- Super Powers module -->
+<script src="app/modules/super-power/super-power.js"></script>
+<script src="app/modules/super-power/super-power.routes.js"></script>
+
+<script src="app/modules/super-power/models/super-power.model.js"></script>
+<script src="app/modules/super-power/collections/super-powers.collection.js"></script>
+
+<script src="app/modules/super-power/controllers/index.controller.js"></script>
+<script src="app/modules/super-power/controllers/form.controller.js"></script>
+
+<script src="app/modules/super-power/modals/super-power-delete-confirm.modal.js"></script>
+
 <!-- endbuild -->
 
 <!-- build:js modules/mw-portal.ui.min.js -->

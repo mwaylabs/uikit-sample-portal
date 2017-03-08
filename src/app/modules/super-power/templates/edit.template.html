@@ -1,0 +1,10 @@
+<form name="superPowerForm" mw-form-leave-confirmation class="row">
+  <div mw-header
+       title="{{'superPower.edit.header' | i18n:{name: ctrl.superPower.get('name')} }}">
+    <div mw-form-actions
+         save="ctrl.save()"
+         cancel="ctrl.cancel()"></div>
+  </div>
+
+  <div class="col-md-12" ng-include="'app/modules/super-power/templates/_form.template.html'"></div>
+</form>
