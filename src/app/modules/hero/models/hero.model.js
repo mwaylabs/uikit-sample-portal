@@ -1,5 +1,5 @@
 angular.module('mwPortal.Hero')
-  .service('HeroModel', function (MwPortalModel, SuperPowersCollection) {
+  .service('HeroModel', function (MwPortalModel, SuperPowerModel, SuperPowersCollection) {
     return MwPortalModel.extend({
       endpoint: '/heroes',
       // This is a nested attribute. That means when the attribute superPowers is set with an array
@@ -7,7 +7,8 @@ angular.module('mwPortal.Hero')
       // So when you call model.get('superPowers') you will get a collection instead of an array
       nested: function () {
         return {
-          superPowers: SuperPowersCollection
+          superPowers: SuperPowersCollection,
+          strongestSuperPower: SuperPowerModel
         };
       },
       hasSuperPower: function(superPower){
