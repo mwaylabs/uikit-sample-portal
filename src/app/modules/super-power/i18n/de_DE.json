@@ -7,7 +7,8 @@
     "tooltips": {
       "icon": "Icon das die Superkraft repräsentiert. Es können alle icons verwendet werden die Font Awesome anbietet",
       "buttonHelp": {
-        "nothingSelected": "Es wurde keine Superkraft ausgewählt"
+        "nothingSelected": "Es wurde keine Superkraft ausgewählt",
+        "appliedSelected": "Mindestens einer der ausgewählten Superkräft wurde für einen Held ausgewählt und kann daher nicht gelöscht werden."
       }
     },
     "index": {

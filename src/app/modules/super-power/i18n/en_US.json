@@ -7,7 +7,8 @@
     "tooltips": {
       "icon": "This is the icon for the super power. You can use all icons that font awesome provides",
       "buttonHelp": {
-        "nothingSelected": "No super power has been selected"
+        "nothingSelected": "No super power has been selected",
+        "appliedSelected": "At least one selected super power is applied on a hero. Therefore it can not be deleted."
       }
     },
     "index": {

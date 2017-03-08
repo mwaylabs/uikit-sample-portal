@@ -13,12 +13,14 @@
      <div mw-button-help>
        <button class="btn btn-danger btn-block"
                ng-click="ctrl.showDeleteConfirmModal()"
-               ng-disabled="ctrl.superPowers.selectable.getSelected().length<1">
+               ng-disabled="ctrl.superPowers.selectable.getSelected().length<1 || !ctrl.canDeleteSelectedSuperPowers()">
          <span mw-icon="fa-trash-o"></span>
          {{'superPower.index.deleteSuperPower' | i18n}}
-         <span mw-button-help-condition="ctrl.superPowers.selectable.getSelected().length < 1"
-               mw-button-help-text="{{'superPower.tooltips.buttonHelp.nothingSelected' | i18n }}"></span>
        </button>
+       <div mw-button-help-condition="ctrl.superPowers.selectable.getSelected().length < 1"
+             mw-button-help-text="{{'superPower.tooltips.buttonHelp.nothingSelected' | i18n }}"></div>
+       <div mw-button-help-condition="!ctrl.canDeleteSelectedSuperPowers()"
+             mw-button-help-text="{{'superPower.tooltips.buttonHelp.appliedSelected' | i18n }}"></div>
      </div>
    </div>
   </div>

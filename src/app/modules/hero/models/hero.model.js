@@ -9,6 +9,9 @@ angular.module('mwPortal.Hero')
         return {
           superPowers: SuperPowersCollection
         };
+      },
+      hasSuperPower: function(superPower){
+        return !!this.get('superPowers').get(superPower);
       }
     });
   });
