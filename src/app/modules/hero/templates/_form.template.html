@@ -16,8 +16,7 @@
 
 <div mw-input-wrapper
      label="{{'hero.superPowers' | i18n}}">
-  <div mw-checkbox-group
-       mw-collection="ctrl.hero.get('superPowers')"
-       mw-options-collection="ctrl.superPowers"
-       mw-options-label-key="name"></div>
+  <div super-power-selector-btn
+       selected="ctrl.hero.get('superPowers')"
+       mw-required="true"></div>
 </div>
