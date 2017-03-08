@@ -40,13 +40,11 @@
         </th>
         <th mw-listable-header-bb
             class="hidden-xs"
-            width="30%"
-            sort="description">
+            width="30%">
           {{'hero.description' | i18n}}
         </th>
         <th mw-listable-header-bb
-            width="40%"
-            sort="description">
+            width="40%">
           {{'hero.superPowers' | i18n}}
         </th>
       </tr>
@@ -57,7 +55,7 @@
         <td class="primary-column">
           <a href="#/start/details">{{ item.get('name') }}</a>
         </td>
-        <td>
+        <td class="hidden-xs">
           {{item.get('description')}}
         </td>
         <td>
