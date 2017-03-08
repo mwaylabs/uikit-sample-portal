@@ -40,7 +40,6 @@
           {{'superPower.name' | i18n}}
         </th>
         <th mw-listable-header-bb
-            class="hidden-xs"
             width="50%">
           {{'superPower.icon' | i18n}}
         </th>
@@ -53,7 +52,7 @@
           <a href="#/super-powers/{{item.id}}/edit">{{ item.get('name') }}</a>
         </td>
         <td>
-          <span ng-if="item.get('icon')" mw-icon="{{ item.get('icon') }}"></span>
+          <span ng-if="item.get('icon')" class="fa {{ item.get('icon') }}"></span>
         </td>
         <td mw-listable-link-show-bb="#/super-powers/{{item.id}}/edit"></td>
       </tr>
