@@ -40,9 +40,14 @@
         </th>
         <th mw-listable-header-bb
             class="hidden-xs"
-            width="70%"
+            width="30%"
             sort="description">
           {{'hero.description' | i18n}}
+        </th>
+        <th mw-listable-header-bb
+            width="40%"
+            sort="description">
+          {{'hero.superPowers' | i18n}}
         </th>
       </tr>
       </thead>
@@ -53,8 +58,12 @@
           <a href="#/start/details">{{ item.get('name') }}</a>
         </td>
         <td>
-          <span class="label label-default label-light" ng-repeat="superPower in item.get('superPowers').models" ng-if="superPower.get('icon')">
-            <span mw-icon="{{superPower.get('icon')}}" tooltip="{{superPower.get('name')}}"></span>
+          {{item.get('description')}}
+        </td>
+        <td>
+          <span class="label label-default label-light" ng-repeat="superPower in item.get('superPowers').models"
+                ng-if="superPower.get('icon')">
+            <span class="fa {{superPower.get('icon')}}" mw-tooltip="{{superPower.get('name')}}"></span>
           </span>
         </td>
         <td mw-listable-link-show-bb="#/heroes/{{item.id}}/edit"></td>
