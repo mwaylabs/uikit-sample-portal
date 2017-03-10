@@ -1,0 +1,33 @@
+<div class="super-power-selector-btn">
+  <button class="btn btn-primary"
+          ng-click="openSuperPowerSelectorModal()"
+          ng-disabled="mwDisabled">
+
+    <span ng-if="selectedIsModel()">
+      <span ng-if="selected.isNew()">
+        {{'superPower.superPowerSelectorBtn.selectSuperPower' | i18n}}
+      </span>
+
+      <span ng-if="!selected.isNew()">
+        {{'superPower.superPowerSelectorBtn.superPowerIsSelected' | i18n:{name: selected.get('name')} }}
+      </span>
+    </span>
+
+    <span ng-if="!selectedIsModel()">
+      <span ng-if="selected.length>1">
+        {{'superPower.superPowerSelectorBtn.superPowersAreSelected' | i18n:{count: selected.length} }}
+      </span>
+
+      <span ng-if="selected.length === 1">
+        {{'superPower.superPowerSelectorBtn.superPowerIsSelected' | i18n:{name: selected.first().get('name')} }}
+      </span>
+
+      <span ng-if="selected.length === 0">
+        {{'superPower.superPowerSelectorBtn.selectSuperPowers' | i18n}}
+      </span>
+    </span>
+  </button>
+
+  <input ng-if="selectedIsModel()" type="hidden" mw-model="selected" ng-model="id" ng-required="mwRequired">
+  <input ng-if="!selectedIsModel()" type="hidden" mw-collection="selected" ng-model="id" ng-required="mwRequired">
+</div>

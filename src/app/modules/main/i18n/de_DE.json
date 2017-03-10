@@ -1,5 +1,7 @@
 {
   "main": {
+    "ok": "Ok",
+    "cancel": "Abbrechen",
     "menu": {
       "start": "Startseite",
       "heroes": "Helden",

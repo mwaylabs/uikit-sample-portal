@@ -4,6 +4,7 @@
     "name": "Name",
     "description": "Beschreibung",
     "superPowers": "Super Kräfte",
+    "strongestSuperPower": "Stärkste Superkraft",
     "tooltips": {
       "heroName": "Die ist der Name des Heldes. Der Name muss eindeutig sein",
       "buttonHelp": {

@@ -1,3 +1,14 @@
+# v0.3.0—Super Power Selector Modal
+- Added Modal to select super powers
+  - Modal supports single and multi selection
+  - Modal supports option enabledSuperpowers so only super powers that are in that collection are enabled
+- Added directive that provides a button to open the selector modal
+  - The button supports required attribute. When required is set at least one item has to be selected
+  - The button also handles multi and single selection and has different button texts for each case
+- Hero Form View checkbox group selector is replaced withe super power selector directive
+- Hero got new attribute `strongestSuperpower`
+- Hero List View highlights strongest super power  
+
 # v0.2.0—Manage Super Powers
 - Created `super-power` module with a list and a form view to create, read, update and delete super powers
 - Added attribute icon to the super power

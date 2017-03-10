@@ -53,14 +53,15 @@
       <tr mw-listable-body-row-bb
           ng-repeat="item in ctrl.heroes.models">
         <td class="primary-column">
-          <a href="#/start/details">{{ item.get('name') }}</a>
+          <a href="#/heroes/{{item.id}}/edit">{{ item.get('name') }}</a>
         </td>
         <td class="hidden-xs">
           {{item.get('description')}}
         </td>
         <td>
           <span class="label label-default label-light" ng-repeat="superPower in item.get('superPowers').models"
-                ng-if="superPower.get('icon')">
+                ng-if="superPower.get('icon')"
+                ng-class="{'label-success': (superPower.get('id') === item.get('strongestSuperPower').get('id')) }">
             <span class="fa {{superPower.get('icon')}}" mw-tooltip="{{superPower.get('name')}}"></span>
           </span>
         </td>

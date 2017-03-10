@@ -16,8 +16,16 @@
 
 <div mw-input-wrapper
      label="{{'hero.superPowers' | i18n}}">
-  <div mw-checkbox-group
-       mw-collection="ctrl.hero.get('superPowers')"
-       mw-options-collection="ctrl.superPowers"
-       mw-options-label-key="name"></div>
+  <div super-power-selector-btn
+       selected="ctrl.hero.get('superPowers')"
+       mw-required="false"></div>
+</div>
+
+<div ng-if="ctrl.hero.get('superPowers').length>0"
+     mw-input-wrapper
+     label="{{'hero.strongestSuperPower' | i18n}}">
+  <div super-power-selector-btn
+       selected="ctrl.hero.get('strongestSuperPower')"
+       enabled-superpowers="ctrl.hero.get('superPowers')"
+       mw-required="false"></div>
 </div>
