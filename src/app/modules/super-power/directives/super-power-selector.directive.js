@@ -8,7 +8,7 @@ angular.module('mwPortal.SuperPower')
         mwRequired: '=',
         mwDisabled: '='
       },
-      templateUrl: 'app/modules/super-power/directives/templates/super-power-selector.directive.html',
+      templateUrl: 'app/modules/super-power/directives/templates/super-power-selector.directive.template.html',
       link: function (scope) {
         var superPowerSelectorModal = new SuperPowerSelectorModal();
 
