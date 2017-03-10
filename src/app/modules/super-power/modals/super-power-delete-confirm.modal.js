@@ -8,7 +8,7 @@ angular.module('mwPortal.SuperPower')
     });
   })
 
-  .controller('SuperPowerDeleteConfirmModalController', function ($scope) {
+  .controller('SuperPowerDeleteConfirmModalController', function () {
     this.deleteSelected = function () {
       // use .secureEach() instead of .each() otherwise you will get reference problems http://stackoverflow.com/a/22024432
       this.selected.secureEach(function (model) {
