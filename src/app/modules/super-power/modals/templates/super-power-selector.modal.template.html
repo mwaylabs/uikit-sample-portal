@@ -2,14 +2,14 @@
      title="{{'superPower.modals.selector.title' | i18n }}">
 
   <div mw-modal-body>
-    <div mw-hide-on-request="superPowers">
+    <div mw-hide-on-request="ctrl.superPowers">
       <div mw-listable-head-2
-           collection="superPowers"
+           collection="ctrl.superPowers"
            collection-name="{{'superPower.entityName' | i18n}}"
            name-attribute="name"></div>
 
       <table mw-listable-bb
-             collection="superPowers">
+             collection="ctrl.superPowers">
         <thead>
         <tr mw-listable-header-row-bb>
           <th mw-listable-header-bb>
@@ -22,7 +22,7 @@
         </thead>
         <tbody>
         <tr mw-listable-body-row-bb
-            ng-repeat="item in superPowers.models">
+            ng-repeat="item in ctrl.superPowers.models">
           <td>{{item.get('name')}}</td>
           <td>
             <span ng-if="item.get('icon')" class="fa {{item.get('icon')}}"></span>
@@ -42,7 +42,8 @@
     <button type="button"
             class="btn btn-primary"
             mw-modal-on-enter
-            ng-click="save()">{{'main.ok' | i18n }}
+            ng-click="ctrl.save()"
+            data-dismiss="modal">{{'main.ok' | i18n }}
     </button>
   </div>
 </div>
