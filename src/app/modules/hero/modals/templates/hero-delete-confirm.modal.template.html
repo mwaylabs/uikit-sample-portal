@@ -1,12 +1,12 @@
-<div mw-modal-confirm ok="deleteSelected()">
-  <div ng-if="selected.length === 1">
-    <p>{{ 'hero.modals.heroDeleteConfirm.hero' | i18n:{name: selected.first().get('name')} }}</p>
+<div mw-modal-confirm ok="ctrl.deleteSelected()">
+  <div ng-if="ctrl.selected.length === 1">
+    <p>{{ 'hero.modals.heroDeleteConfirm.hero' | i18n:{name: ctrl.selected.first().get('name')} }}</p>
   </div>
 
-  <div ng-if="selected.length > 1">
+  <div ng-if="ctrl.selected.length > 1">
     <p>{{ 'hero.modals.heroDeleteConfirm.heroes' | i18n }}</p>
     <ul>
-      <li ng-repeat="model in selected.models">{{ model.get('name') }}</li>
+      <li ng-repeat="model in ctrl.selected.models">{{ model.get('name') }}</li>
     </ul>
   </div>
 </div>
