@@ -53,7 +53,7 @@
       <tr mw-listable-body-row-bb
           ng-repeat="item in ctrl.heroes.models">
         <td class="primary-column">
-          <a href="#/start/details">{{ item.get('name') }}</a>
+          <a href="#/heroes/{{item.id}}/edit">{{ item.get('name') }}</a>
         </td>
         <td class="hidden-xs">
           {{item.get('description')}}
