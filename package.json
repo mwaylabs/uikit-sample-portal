@@ -33,8 +33,6 @@
     "preinstall": "npm install -g grunt && npm install -g bower && bower install",
     "start": "grunt serve",
     "server": "cd json-server/app && node json-server",
-    "build": "grunt build",
-    "test": "grunt test",
-    "prepush": "npm test"
+    "build": "grunt build"
   }
 }
