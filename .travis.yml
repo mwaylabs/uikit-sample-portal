@@ -14,10 +14,11 @@ deploy:
     bucket: mw-uikit
     local_dir: aws_upload
     acl: public_read_write
-    branches:
-      only:
-        - master
-        - feature/aws-deploy
+    on:
+      branches:
+        only:
+          - master
+          - feature/aws-deploy
   - provider: codedeploy
     access_key_id: AKIAJTMP6OVMWJ2AE7UQ
     secret_access_key:
@@ -28,7 +29,8 @@ deploy:
     application: UikitSamplePortal
     deployment_group: uikitSamplePortalInstance
     region: eu-west-1
-    branches:
-      only:
-        - master
-        - feature/aws-deploy
+    on:
+      branches:
+        only:
+          - master
+          - feature/aws-deploy
