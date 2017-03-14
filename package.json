@@ -32,7 +32,7 @@
   "scripts": {
     "preinstall": "npm install -g grunt && npm install -g bower && bower install",
     "start": "grunt serve",
-    "server": "cd json-server && node json-server",
+    "server": "cd json-server/app && node json-server",
     "build": "grunt build",
     "test": "grunt test",
     "prepush": "npm test"
