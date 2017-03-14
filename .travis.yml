@@ -15,7 +15,7 @@ deploy:
     local_dir: aws_upload
     acl: public_read_write
     on:
-      repo: Zarlex/uikit-sample-portal
+      branch: *
   - provider: codedeploy
     access_key_id: AKIAJTMP6OVMWJ2AE7UQ
     secret_access_key:
@@ -27,4 +27,4 @@ deploy:
     deployment_group: uikitSamplePortalInstance
     region: eu-west-1
     on:
-      repo: Zarlex/uikit-sample-portal
+      branch: *
