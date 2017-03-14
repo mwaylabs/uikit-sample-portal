@@ -1,12 +1,11 @@
-language: ruby
-
+language: node_js
+node_js:
+- '6.9.2'
 install: echo "Deploy mw-uikit json-server for sample data"
-
 before_deploy:
   - zip -r latest ./json-server
   - mkdir -p aws_upload
   - mv latest.zip aws_upload/latest.zip
-
 deploy:
   - provider: s3
     access_key_id: AKIAJTMP6OVMWJ2AE7UQ
@@ -17,7 +16,6 @@ deploy:
     acl: public_read_write
     on:
       repo: Zarlex/uikit-sample-portal
-
   - provider: codedeploy
     access_key_id: AKIAJTMP6OVMWJ2AE7UQ
     secret_access_key:
