@@ -14,6 +14,7 @@ deploy:
     bucket: mw-uikit
     local_dir: aws_upload
     acl: public_read_write
+    skip_cleanup: true 
     on:
       all_branches: true
   - provider: codedeploy
@@ -26,5 +27,6 @@ deploy:
     application: UikitSamplePortal
     deployment_group: uikitSamplePortalInstance
     region: eu-west-1
+    skip_cleanup: true 
     on:
       all_branches: true
