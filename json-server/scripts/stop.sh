@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-cd ~/node
+cd ~/mw-uikit
 pm2 stop www || true
