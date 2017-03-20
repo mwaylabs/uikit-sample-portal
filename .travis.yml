@@ -14,7 +14,6 @@ deploy:
     bucket: mw-uikit
     region: eu-central-1
     local_dir: aws_upload
-    acl: public_read_write
     skip_cleanup: true 
     on:
       all_branches: true
