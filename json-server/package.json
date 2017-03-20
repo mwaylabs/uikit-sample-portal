@@ -1,0 +1,10 @@
+{
+  "name": "sample-ui-portal-server",
+  "version": "0.3.0",
+  "devDependencies": {
+    "json-server": "^0.9.5"
+  },
+  "scripts": {
+    "start": "cd ./json-server && node json-server.js"
+  }
+}
