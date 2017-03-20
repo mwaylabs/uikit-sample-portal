@@ -12,6 +12,7 @@ deploy:
     secret_access_key:
       secure: GFF+wq9rs9N83p+RRYkssfpIXF/CmhaPBWyxaJzuJl0b3M+S11g5lMWqa3JCOJYetp0zWqrQU4AfrYCXRmD5EFP8ksmSf2id1a5g2A3S0LvCPK5W65aRdEXraIuYcuhfeCRN6X4tZcvVLA8IrRQOScv/BdUhPzNeOraDL6aKuze8ZJR3va5Y84MHSk5PheRep1UwXsOwrV+jWtoWAM4gcUmm8fNlp/RrBGGJuTB9bXkua1dEvB/SRaFU6ziJSd0RDaHINc/gMfbkyScIi5PEaFNv7EaXPeoYN4KSGc1eYX+8P8f1fcEI377fwBT6Ed5TNl29DlVttPUkyDW58Ai5S13J7vFjlqAtgNWILDCUW2dDR8EH0nFqePC8Zh2sawMB3J6fIZ0Xo+g4yzg1nB/Cuwcz+c/CN+yL+utiB2ruJAvoGiXi9KFiIz6wcNEPt32NXqkTIUn6yJNIhBBhaS8kEN3uQgebdOHOgdTbe+af5Tl6e8SLZmnExI5VRpzHuzvC4gU+BPH3SXGyiOHSE2hBV3G3nKTMbNJT7yBQsDHGV5/We25VfiIfAWdXV59Y/MkmyPXLYFkCjfuKwfjetIJZUhk7/xOyguR2MyVoTjkW4N/eLdWL5U8dprNXmx7LfgGBzx0PY7nfG68Vd730lwXO7ZbCuJ7XWqf8j+KmYtDyMMQ=
     bucket: mw-uikit
+    region: eu-central-1
     local_dir: aws_upload
     acl: public_read_write
     skip_cleanup: true 
@@ -26,7 +27,7 @@ deploy:
     bundle_type: zip
     application: UikitSamplePortal
     deployment_group: uikitSamplePortalInstance
-    region: eu-west-1
+    region: eu-central-1
     skip_cleanup: true 
     on:
       all_branches: true
