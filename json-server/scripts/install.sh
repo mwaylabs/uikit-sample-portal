@@ -2,12 +2,17 @@
 set -e
 
 # update instance
-yum -y update
+sudo apt-get update
 
-# add nodejs to yum
-curl --silent --location https://deb.nodesource.com/setup_7.x | bash -
-yum -y install nodejs
+sudo apt-get install build-essential libssl-dev
+
+# install nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+source ~/.profile
+
+# install node
+nvm install node
 
 # install pm2 module globaly
-npm install -g pm2
+sudo npm install -g pm2
 pm2 update
