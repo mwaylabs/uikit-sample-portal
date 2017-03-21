@@ -15,7 +15,6 @@ deploy:
     skip_cleanup: true 
     on:
       all_branches: true
-
   - provider: codedeploy
     access_key_id: AKIAJTMP6OVMWJ2AE7UQ
     secret_access_key:
@@ -29,7 +28,6 @@ deploy:
     skip_cleanup: true 
     on:
       all_branches: true
-
   - provider: script
       script: ./bin/publish-portal.sh
       skip_cleanup: true 
