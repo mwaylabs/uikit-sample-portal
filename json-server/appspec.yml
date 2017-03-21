@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: ./app
+  - source: .
     destination: /home/ubuntu/mw-uikit
 permissions:
   - object: /home/ubuntu
