@@ -16,6 +16,14 @@ if [ ! -z "$DEPLOYMENT_GROUP_NAME" ]; then
     fi
 fi
 
+# save nvm env in bash rc
+hasNvmEnv=`grep "export NVM_DIR" ~/.bash_profile | cat`
+if [ -z "$hasNvmEnv" ]; then
+  echo "export NVM_DIR='$HOME/.nvm'" >> ~/.bash_profile
+  echo "[ -s '$NVM_DIR/nvm.sh' ] && \. '$NVM_DIR/nvm.sh'" >> ~/.bash_profile
+  echo "source '$NVM_DIR/nvm.sh'" >> ~/.bash_profile
+fi
+
 # add node to startup
 hasRc=`grep "su -l $USER" /etc/rc.local | cat`
 if [ -z "$hasRc" ]; then
