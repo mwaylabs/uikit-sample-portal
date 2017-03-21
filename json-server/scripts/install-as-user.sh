@@ -14,9 +14,6 @@ source "$NVM_DIR/nvm.sh"
 echo "installing node"
 nvm install node
 
-# create symlink
-sudo ln -s "$(which nodejs)" /usr/bin/node
-
 # install pm2 module globaly
 echo "installing pm2"
 sudo npm install -g pm2
