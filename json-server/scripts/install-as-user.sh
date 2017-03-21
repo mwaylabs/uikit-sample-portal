@@ -10,11 +10,19 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 source "$NVM_DIR/nvm.sh"
 
+# save nvm env in bash rc
+hasNvmEnv=`grep "export NVM_DIR" ~/.bash_profile | cat`
+if [ -z "$hasNvmEnv" ]; then
+  echo "export NVM_DIR='$HOME/.nvm'" >> ~/.bash_profile
+  echo "[ -s '$NVM_DIR/nvm.sh' ] && \. '$NVM_DIR/nvm.sh'" >> ~/.bash_profile
+  echo "source '$NVM_DIR/nvm.sh'" >> ~/.bash_profile
+fi
+
 # install node
 echo "installing node"
 nvm install node
 
-# install pm2 module globaly
+# install pm2 module globally
 echo "installing pm2"
 sudo npm install -g pm2
 pm2 update
@@ -32,14 +40,6 @@ if [ ! -z "$DEPLOYMENT_GROUP_NAME" ]; then
     else
         sed -i "/export NODE_ENV=\b/c\export NODE_ENV=$DEPLOYMENT_GROUP_NAME" ~/.bash_profile
     fi
-fi
-
-# save nvm env in bash rc
-hasNvmEnv=`grep "export NVM_DIR" ~/.bash_profile | cat`
-if [ -z "$hasNvmEnv" ]; then
-  echo "export NVM_DIR='$HOME/.nvm'" >> ~/.bash_profile
-  echo "[ -s '$NVM_DIR/nvm.sh' ] && \. '$NVM_DIR/nvm.sh'" >> ~/.bash_profile
-  echo "source '$NVM_DIR/nvm.sh'" >> ~/.bash_profile
 fi
 
 # add node to startup
