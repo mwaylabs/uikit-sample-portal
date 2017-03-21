@@ -12,8 +12,6 @@ sudo apt-get install build-essential libssl-dev
 echo "installing NVM"
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-source "$NVM_DIR/nvm.sh"
 
 # install node
 echo "installing node"

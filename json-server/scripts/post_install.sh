@@ -16,6 +16,10 @@ if [ ! -z "$DEPLOYMENT_GROUP_NAME" ]; then
     fi
 fi
 
+# setup nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+source "$NVM_DIR/nvm.sh"
+
 # save nvm env in bash rc
 hasNvmEnv=`grep "export NVM_DIR" ~/.bash_profile | cat`
 if [ -z "$hasNvmEnv" ]; then
