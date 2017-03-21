@@ -15,16 +15,23 @@ deploy:
     skip_cleanup: true 
     on:
       all_branches: true
+
   - provider: codedeploy
     access_key_id: AKIAJTMP6OVMWJ2AE7UQ
     secret_access_key:
       secure: nx3c0tnZUKQLhVqH6ZM0VXTIwIzSA+kCfweNW9TcByxuLAO7CR4c3kf8/yDSVXL45260ABzLepl9Eivs+9MkkYiJ18ITwW9jm8KIEYPJkHxuGVA4nsoFnsYL1A4mbIJcH1UMFitzZQyUvGG9R3Ch35rLyxV5aYURQLsxHmLYAClyrloUGLGXjE5/0C73jMYrP/yzjetiLLk0TLUD1Zh52cc9mZcTKC1Pte9k9UMba/uOSq8R0uJSnY3ohzRh4qzJrNNZ8++wuZY/+0VwmiCrFhal0zfSbqkAhnAXCJ1fKFbmu2mI8qAcHWmYjsEslDBa3O4rygZf94TBzJAG6eEva3CvYEtgRUAI0MkxvQMzO5K7fkdrXTl4mPQ/qZ6dqf5R6MNhGqV1dJuOvFaLwNEmVVOnsuPWC6F692Vwb9YdgVw8hvZxlHeLp8pgRUNGmDe7Hb/QlA5mU10wvQIQKg5fUBN0HgbN0eSHrmZBOiUkU62fw8ztKKOJxQsB0zayg7c0pkJgqMAbPTLSgLDymPvVsJCNAnpUesHdX+XRHX7kqVo2VSsJ+Lx6DokTGe1pXPmmkYorLiVXLEnEF2SJdlxUCkJamW1CmafwdUJ6ug9aqXwLfpMGI+mFKQJPlhSsGEoLPSLfQDrRjU09BXM5fzBguBVBeySmgGiOzo3wCZMZHzo=
+    deployment_group: uikitSamplePortalInstance
+    region: eu-central-1
     bucket: mw-uikit
     key: latest.zip
     bundle_type: zip
     application: UikitSamplePortal
-    deployment_group: uikitSamplePortalInstance
-    region: eu-central-1
     skip_cleanup: true 
     on:
       all_branches: true
+
+  - provider: script
+      script: ./bin/publish-portal.sh
+      skip_cleanup: true 
+      on:
+        all_branches: true
