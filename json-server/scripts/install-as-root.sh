@@ -6,4 +6,4 @@ echo "update instance"
 sudo apt-get update
 
 echo "installing essentials"
-sudo apt-get install build-essential libssl-dev
+sudo apt-get install build-essential libssl-dev npm
