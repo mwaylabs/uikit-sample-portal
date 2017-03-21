@@ -4,4 +4,4 @@ if [ ! -z "$DEPLOYMENT_GROUP_NAME" ]; then
 fi
 
 cd ~/mw-uikit/app
-pm2 start bin/www -n www -i 0
+pm2 start json-server -n www -i 0
