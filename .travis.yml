@@ -1,36 +1,40 @@
 language: node_js
 node_js:
-- '6.9.2'
-install: echo "Deploy mw-uikit json-server for sample data"
+- 6.9.2
+install: echo "Deploy mw-uikit sample portal"
+env:
+  global:
+  - GH_REF=github.com/Zarlex/uikit-sample-portal
+  - secure: FTE9Ahmv24QltafYjEr1pgKhkqcnDL5lP1OLCveoqISgHfZ3oRiEfUTFYZg8FJiFiSUWEGhdwnFmyoS+WRdJiRNAT891WDcKZvNSM6vGuXMv53cWgXKlMkbthZbb8s299s6keq7ddnIkWF9WMClb6kS7uMCWIBC2Qhdx0bOMqYiFZ9AgN+9V0GmZSRqQaDVpsWKj+JaALytwGelP8WskgYjzAyo9JjIr65GL+YEWMRCKeW2tvCg8P1B9UzXq0QfFQ77BlsEVSpbBE7rIYAkSRbGMgRwfoKqzCHCJy2lqiVLM+eGqQcGl2usaTwYUsnDQ1z9KihffBqaYNlaKtEJjC3kbBqL28aVelZ1ZpUzaz9zI2B2N2O7sEHLBK8+EoKgN7ogRbans8IH/PsUt1U+FZI+DyMVqIzYitk/HNMlSrujfbsFSWNqB+h+AloP11EmpSmM+CrrH8kmGBV+TU4zyQVF2sHZtUEqOfCJznZQtl2Jdrimmf9mpBdasOiz4x3+CLt4y7l9y5HAGRjepWeb8OjzyC+EARuX2Sb5BxeH0BKKJF5gRBoD37R0bEeGDFnURzqoqS/hDONTgK8jn6AaX7VNVVSTE9RHjxFJ2Vbb8yKhuVP8w8JlzYCiJvPbYxZk/w18A3DE+J8MFE0vdg7uQr8Zp0QeehLC7v7zAWWjoIe4=
 before_deploy:
-  - ./bin/bundle-server.sh
-  - ./bin/build-portal.sh
+- ./bin/bundle-server.sh
+- ./bin/build-portal.sh
 deploy:
-  - provider: s3
-    access_key_id: AKIAJTMP6OVMWJ2AE7UQ
-    secret_access_key:
-      secure: GFF+wq9rs9N83p+RRYkssfpIXF/CmhaPBWyxaJzuJl0b3M+S11g5lMWqa3JCOJYetp0zWqrQU4AfrYCXRmD5EFP8ksmSf2id1a5g2A3S0LvCPK5W65aRdEXraIuYcuhfeCRN6X4tZcvVLA8IrRQOScv/BdUhPzNeOraDL6aKuze8ZJR3va5Y84MHSk5PheRep1UwXsOwrV+jWtoWAM4gcUmm8fNlp/RrBGGJuTB9bXkua1dEvB/SRaFU6ziJSd0RDaHINc/gMfbkyScIi5PEaFNv7EaXPeoYN4KSGc1eYX+8P8f1fcEI377fwBT6Ed5TNl29DlVttPUkyDW58Ai5S13J7vFjlqAtgNWILDCUW2dDR8EH0nFqePC8Zh2sawMB3J6fIZ0Xo+g4yzg1nB/Cuwcz+c/CN+yL+utiB2ruJAvoGiXi9KFiIz6wcNEPt32NXqkTIUn6yJNIhBBhaS8kEN3uQgebdOHOgdTbe+af5Tl6e8SLZmnExI5VRpzHuzvC4gU+BPH3SXGyiOHSE2hBV3G3nKTMbNJT7yBQsDHGV5/We25VfiIfAWdXV59Y/MkmyPXLYFkCjfuKwfjetIJZUhk7/xOyguR2MyVoTjkW4N/eLdWL5U8dprNXmx7LfgGBzx0PY7nfG68Vd730lwXO7ZbCuJ7XWqf8j+KmYtDyMMQ=
-    bucket: mw-uikit
-    region: eu-central-1
-    local_dir: aws_upload
-    skip_cleanup: true 
-    on:
-      all_branches: true
-  - provider: codedeploy
-    access_key_id: AKIAJTMP6OVMWJ2AE7UQ
-    secret_access_key:
-      secure: nx3c0tnZUKQLhVqH6ZM0VXTIwIzSA+kCfweNW9TcByxuLAO7CR4c3kf8/yDSVXL45260ABzLepl9Eivs+9MkkYiJ18ITwW9jm8KIEYPJkHxuGVA4nsoFnsYL1A4mbIJcH1UMFitzZQyUvGG9R3Ch35rLyxV5aYURQLsxHmLYAClyrloUGLGXjE5/0C73jMYrP/yzjetiLLk0TLUD1Zh52cc9mZcTKC1Pte9k9UMba/uOSq8R0uJSnY3ohzRh4qzJrNNZ8++wuZY/+0VwmiCrFhal0zfSbqkAhnAXCJ1fKFbmu2mI8qAcHWmYjsEslDBa3O4rygZf94TBzJAG6eEva3CvYEtgRUAI0MkxvQMzO5K7fkdrXTl4mPQ/qZ6dqf5R6MNhGqV1dJuOvFaLwNEmVVOnsuPWC6F692Vwb9YdgVw8hvZxlHeLp8pgRUNGmDe7Hb/QlA5mU10wvQIQKg5fUBN0HgbN0eSHrmZBOiUkU62fw8ztKKOJxQsB0zayg7c0pkJgqMAbPTLSgLDymPvVsJCNAnpUesHdX+XRHX7kqVo2VSsJ+Lx6DokTGe1pXPmmkYorLiVXLEnEF2SJdlxUCkJamW1CmafwdUJ6ug9aqXwLfpMGI+mFKQJPlhSsGEoLPSLfQDrRjU09BXM5fzBguBVBeySmgGiOzo3wCZMZHzo=
-    deployment_group: uikitSamplePortalInstance
-    region: eu-central-1
-    bucket: mw-uikit
-    key: latest.zip
-    bundle_type: zip
-    application: UikitSamplePortal
-    skip_cleanup: true 
-    on:
-      all_branches: true
-  - provider: script
-    script: ./bin/release-on-gh-pages.sh
-    skip_cleanup: true 
-    on:
-      all_branches: true
+- provider: s3
+  access_key_id: AKIAJTMP6OVMWJ2AE7UQ
+  secret_access_key:
+    secure: GFF+wq9rs9N83p+RRYkssfpIXF/CmhaPBWyxaJzuJl0b3M+S11g5lMWqa3JCOJYetp0zWqrQU4AfrYCXRmD5EFP8ksmSf2id1a5g2A3S0LvCPK5W65aRdEXraIuYcuhfeCRN6X4tZcvVLA8IrRQOScv/BdUhPzNeOraDL6aKuze8ZJR3va5Y84MHSk5PheRep1UwXsOwrV+jWtoWAM4gcUmm8fNlp/RrBGGJuTB9bXkua1dEvB/SRaFU6ziJSd0RDaHINc/gMfbkyScIi5PEaFNv7EaXPeoYN4KSGc1eYX+8P8f1fcEI377fwBT6Ed5TNl29DlVttPUkyDW58Ai5S13J7vFjlqAtgNWILDCUW2dDR8EH0nFqePC8Zh2sawMB3J6fIZ0Xo+g4yzg1nB/Cuwcz+c/CN+yL+utiB2ruJAvoGiXi9KFiIz6wcNEPt32NXqkTIUn6yJNIhBBhaS8kEN3uQgebdOHOgdTbe+af5Tl6e8SLZmnExI5VRpzHuzvC4gU+BPH3SXGyiOHSE2hBV3G3nKTMbNJT7yBQsDHGV5/We25VfiIfAWdXV59Y/MkmyPXLYFkCjfuKwfjetIJZUhk7/xOyguR2MyVoTjkW4N/eLdWL5U8dprNXmx7LfgGBzx0PY7nfG68Vd730lwXO7ZbCuJ7XWqf8j+KmYtDyMMQ=
+  bucket: mw-uikit
+  region: eu-central-1
+  local_dir: aws_upload
+  skip_cleanup: true
+  on:
+    all_branches: true
+- provider: codedeploy
+  access_key_id: AKIAJTMP6OVMWJ2AE7UQ
+  secret_access_key:
+    secure: nx3c0tnZUKQLhVqH6ZM0VXTIwIzSA+kCfweNW9TcByxuLAO7CR4c3kf8/yDSVXL45260ABzLepl9Eivs+9MkkYiJ18ITwW9jm8KIEYPJkHxuGVA4nsoFnsYL1A4mbIJcH1UMFitzZQyUvGG9R3Ch35rLyxV5aYURQLsxHmLYAClyrloUGLGXjE5/0C73jMYrP/yzjetiLLk0TLUD1Zh52cc9mZcTKC1Pte9k9UMba/uOSq8R0uJSnY3ohzRh4qzJrNNZ8++wuZY/+0VwmiCrFhal0zfSbqkAhnAXCJ1fKFbmu2mI8qAcHWmYjsEslDBa3O4rygZf94TBzJAG6eEva3CvYEtgRUAI0MkxvQMzO5K7fkdrXTl4mPQ/qZ6dqf5R6MNhGqV1dJuOvFaLwNEmVVOnsuPWC6F692Vwb9YdgVw8hvZxlHeLp8pgRUNGmDe7Hb/QlA5mU10wvQIQKg5fUBN0HgbN0eSHrmZBOiUkU62fw8ztKKOJxQsB0zayg7c0pkJgqMAbPTLSgLDymPvVsJCNAnpUesHdX+XRHX7kqVo2VSsJ+Lx6DokTGe1pXPmmkYorLiVXLEnEF2SJdlxUCkJamW1CmafwdUJ6ug9aqXwLfpMGI+mFKQJPlhSsGEoLPSLfQDrRjU09BXM5fzBguBVBeySmgGiOzo3wCZMZHzo=
+  deployment_group: uikitSamplePortalInstance
+  region: eu-central-1
+  bucket: mw-uikit
+  key: latest.zip
+  bundle_type: zip
+  application: UikitSamplePortal
+  skip_cleanup: true
+  on:
+    all_branches: true
+- provider: script
+  script: ./bin/release-on-gh-pages.sh
+  skip_cleanup: true
+  on:
+    all_branches: true
