@@ -29,7 +29,7 @@ deploy:
     on:
       all_branches: true
   - provider: script
-      script: ./bin/publish-portal.sh
-      skip_cleanup: true 
-      on:
-        all_branches: true
+    script: ./bin/publish-portal.sh
+    skip_cleanup: true 
+    on:
+      all_branches: true
