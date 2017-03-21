@@ -4,6 +4,7 @@ node_js:
 install: echo "Deploy mw-uikit json-server for sample data"
 before_deploy:
   - ./bin/bundle-server.sh
+  - ./bin/build-portal.sh
 deploy:
   - provider: s3
     access_key_id: AKIAJTMP6OVMWJ2AE7UQ
@@ -29,7 +30,7 @@ deploy:
     on:
       all_branches: true
   - provider: script
-    script: ./bin/publish-portal.sh
+    script: ./bin/release-on-gh-pages.sh
     skip_cleanup: true 
     on:
       all_branches: true
