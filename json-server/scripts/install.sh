@@ -13,6 +13,11 @@ echo "installing NVM"
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 
+# setup nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+source "$NVM_DIR/nvm.sh"
+
 # install node
 echo "installing node"
 nvm install node
