@@ -12,11 +12,11 @@ permissions:
       - file
 hooks:
   BeforeInstall:
-    - location: scripts/install.sh
+    - location: scripts/install-as-root.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: scripts/post_install.sh
+    - location: scripts/install-as-user.sh
       timeout: 600
       runas: ubuntu
   ApplicationStart:
