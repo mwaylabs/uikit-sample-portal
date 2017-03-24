@@ -18,8 +18,8 @@ deploy:
   region: eu-central-1
   local_dir: aws_upload
   skip_cleanup: true
-  on:
-    all_branches: true
+  on: 
+    branch: master
 - provider: codedeploy
   access_key_id: AKIAJTMP6OVMWJ2AE7UQ
   secret_access_key:
@@ -31,10 +31,10 @@ deploy:
   bundle_type: zip
   application: UikitSamplePortal
   skip_cleanup: true
-  on:
-    all_branches: true
+  on: 
+    branch: master
 - provider: script
   script: ./bin/release-on-gh-pages.sh
   skip_cleanup: true
-  on:
-    all_branches: true
+  on: 
+    branch: master
