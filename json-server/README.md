@@ -124,7 +124,13 @@ You can also follow this article [Comprehensive AWS EC2 Deployment with TravisCI
 - Click on `Actions > Instance Settings > Add/Edit Tags`
 - Create a tag with a key e.g. `CodeDeployInstance`
 
-## 9. Create CodeDeploy Application 
+## 9. Install DeployAgent on your created instance
+- In order to let Code Deploy deploy the application on your instance you have to 
+[install the Code Deploy](http://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install.html) on your instance
+- Connect to your instance via ssh `ssh -i PATH_TO_YOUR_KEY_FILE ubuntu@PUBLIC_IP_ADRESS_OF_YOUR_INSTANCE`
+- Follow the official Amazon Guide: http://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install.html
+
+## 10. Create CodeDeploy Application 
 - Create a new [Code Deploy Application](https://eu-central-1.console.aws.amazon.com/codedeploy/home?region=eu-central-1#/applications/new)
 - Set the application name that you used in step 3 ([[Travis-Code-Deploy-Policy]]) e.g. `NodeApp`
 - Set a Deployment Group name e.g. `NodeAppDeployGroup`
@@ -133,13 +139,13 @@ You can also follow this article [Comprehensive AWS EC2 Deployment with TravisCI
 - Set the service role to the role that you created in step 6 ([[Create a role for the Code Deploy Application]]) e.g. `AWSCodeDeployRole`
 - Create the application
 
-## 10. Create S3 Bucket
+## 11. Create S3 Bucket
 - Create a [new bucket](https://console.aws.amazon.com/s3/home?region=eu-central-1)
 - Give it name e.g. `code-deploy-bucket`
 - Select a region
 - Create bucket
 
-## 11. Modify .travis.yml
+## 12. Modify .travis.yml
 - Open the file `travis.yml` that can be found in the root folder
 - Update the following lines
 
