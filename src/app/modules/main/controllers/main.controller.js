@@ -1,6 +1,5 @@
 angular.module('mwPortal.Main')
   .controller('MainController', function (i18n) {
-    var version = '';
     this.locales = i18n.getLocales();
 
     this.setLocale = function (id) {
