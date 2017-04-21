@@ -373,8 +373,8 @@
       'copy:buildToDist', // copy output of previous task into final dist folder
       'cssmin', // css minification
       'rev:dist', // add cache buster to file name (hash.filename.ext)
-      'manifest', // be careful with the cache manifest. Make sure the server is not caching the index.html otherwise you will get into trouble!
-      'replace:addCacheManifest', //this task is only needed when using the manifest task
+      //'manifest', // be careful with the cache manifest. Make sure the server is not caching the index.html otherwise you will get into trouble! gh-pages for example is caching it
+      //'replace:addCacheManifest', //this task is only needed when using the manifest task
       'usemin', // update the html file links with the links to the concated, minified files
       'clean:tmp' // clean tmp folder
     ]);
