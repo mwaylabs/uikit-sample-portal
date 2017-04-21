@@ -21,6 +21,7 @@
     "grunt-ng-annotate": "~1.0.1",
     "grunt-ngmin": "~0.0.3",
     "grunt-preprocess": "~4.0.0",
+    "grunt-processhtml": "^0.4.1",
     "grunt-rev": "~0.1.0",
     "grunt-shell": "~0.6.4",
     "grunt-text-replace": "~0.3.2",

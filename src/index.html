@@ -37,6 +37,27 @@
   <!-- build:css(.tmp) main.css -->
   <link rel="stylesheet" href="main.css">
   <!-- endbuild -->
+
+  <!-- this will be removed during the build process -->
+  <!-- build:remove -->
+  <script>
+    window.CONFIG = {
+      env: 'DEVELOPMENT',
+      version: 'LOCAL'
+    }
+  </script>
+  <!-- /build -->
+
+  <!-- this will be set during the build process -->
+  <!-- build:template
+  <script>
+    window.CONFIG = {
+      env: 'PRODUCTION',
+      version: '<%= version %>'
+    }
+  </script>
+  /build -->
+
 </head>
 <body>
 
@@ -149,7 +170,6 @@
 <script src="app/modules/main/controllers/main.controller.js"></script>
 <script src="app/modules/main/controllers/not-found.controller.js"></script>
 
-<script src="app/modules/main/services/config.service.js"></script>
 <script src="app/modules/main/services/js-exception-handler.service.js"></script>
 
 <!-- Start module -->
