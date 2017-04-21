@@ -8,3 +8,4 @@ node_modules
 dist
 src/bower-components
 src/fonts
+aws_upload

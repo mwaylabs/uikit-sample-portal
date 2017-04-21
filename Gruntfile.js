@@ -304,6 +304,17 @@
             }
           }
         },
+        processhtml: {
+          dist: {
+            options: {
+              data: {
+                version: getVersionFromPackageJson()
+              }
+            },
+            src: '<%= config.tmp %>/index.html',
+            dest: '<%= config.tmp %>/index.html'
+          }
+        },
         manifest: {
           generate: {
             options: {
@@ -330,14 +341,6 @@
       }
     );
 
-    grunt.registerTask('setConfigVars', 'Set variables in config.json', function () {
-      var packageVersion = getVersionFromPackageJson();
-      setConfigVars('<%= config.tmp %>/app/config.json', {
-        env: 'PRODUCTION',
-        version: packageVersion
-      });
-    });
-
     grunt.registerTask('serve', [
       'copy:fonts', // this is needed for external fonts that were installed via bower like font-awesome
       'clean:server', // remove all prevous build files
@@ -356,7 +359,7 @@
       'clean:dist', // clean previous build files
       'copy:fonts', // this is needed for external fonts that were installed via bower like font-awesome
       'copy:portalToTmpFolder', // copy the whole src folder into tmp for the build step
-      'setConfigVars' // Set config vars like current version number from package.json, env, etc
+      'processhtml:dist' // set config vars to production mode in index.html
     ]);
 
     grunt.registerTask('buildTmpFolder', [
@@ -384,5 +387,4 @@
 
     grunt.registerTask('default', ['server']);
   };
-
 }());

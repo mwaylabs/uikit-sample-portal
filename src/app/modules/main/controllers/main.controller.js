@@ -1,5 +1,5 @@
 angular.module('mwPortal.Main')
-  .controller('MainController', function (i18n, config) {
+  .controller('MainController', function (i18n) {
     var version = '';
     this.locales = i18n.getLocales();
 
@@ -13,10 +13,6 @@ angular.module('mwPortal.Main')
     };
 
     this.getAppversion = function () {
-      return version;
+      return window.CONFIG.version;
     };
-
-    config.getConfig().then(function (config) {
-      version = config.version;
-    });
   });
