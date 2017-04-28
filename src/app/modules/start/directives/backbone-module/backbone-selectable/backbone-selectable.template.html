@@ -1,0 +1,27 @@
+<div class="backbone-selectable">
+  <ul>
+    <li ng-repeat="item in mwPortalCollection.models"
+        ng-click="item.selectable.toggleSelect()"
+        ng-class="{selected: item.selectable.isSelected()}">
+      <span>
+        {{item.get('name')}}
+        <span ng-if="item.selectable.isSelected()" mw-icon="fa-check"></span>
+      </span>
+    </li>
+  </ul>
+  <button ng-if="!mwPortalCollection.selectable.allSelected()" class="btn btn-xs btn-default" ng-click="mwPortalCollection.selectable.selectAll()">
+    Select All
+  </button>
+  <button ng-if="mwPortalCollection.selectable.getSelected().length>0" class="btn btn-xs btn-default" ng-click="mwPortalCollection.selectable.unSelectAll()">
+   Clear Selection
+  </button>
+  <hr>
+  Selected Items
+  <ul>
+    <li ng-repeat="item in mwPortalCollection.selectable.getSelected().models"
+        ng-click="item.selectable.unSelect()">
+      {{item.get('name')}}
+      <span mw-icon="fa-times"></span>
+    </li>
+  </ul>
+</div>

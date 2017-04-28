@@ -1,0 +1,15 @@
+.backbone-selectable{
+  li.selected{
+    font-style: italic;
+  }
+
+  li{
+    cursor: pointer;
+  }
+}
+
+.backbone-selectable.with-options{
+  li.disabled{
+    color: $gray-light;
+  }
+}

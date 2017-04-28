@@ -1,3 +1,10 @@
-.index{
+.index {
+  .mw-collapsible-heading {
+    margin-bottom: 15px;
+  }
 
+  .mw-panel {
+    height: 350px;
+    overflow: scroll;
+  }
 }
