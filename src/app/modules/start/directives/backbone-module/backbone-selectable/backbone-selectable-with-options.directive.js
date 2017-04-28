@@ -16,23 +16,22 @@ angular.module('mwPortal.Start')
             return {
               isDisabled: function(){
                 if(_.isArray(scope.disabledItems)){
-                  return scope.disabledItems.indexOf(this.get('id')) >= 0
+                  return scope.disabledItems.indexOf(this.get('id')) >= 0;
                 } else {
                   return false;
                 }
               }
-            }
+            };
           }
         });
 
         var Collection = MwPortalCollection.extend({
           model: Model,
           selectableOptions: function(){
-            console.log(scope.isSingleSelection)
             return {
               isSingleSelection: scope.isSingleSelection,
               preSelected: preSelected
-            }
+            };
           }
         });
 
