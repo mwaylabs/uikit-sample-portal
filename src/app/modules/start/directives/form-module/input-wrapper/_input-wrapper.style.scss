@@ -1,0 +1,40 @@
+.input-wrapper {
+  .mw-input-wrapper {
+    .clearfix {
+      display: flex;
+
+      label,
+      .input-holder {
+        flex-basis: 50%;
+        padding-left: 0;
+      }
+    }
+
+    > div:last-child {
+      margin-left: 50%;
+      padding-left: 0;
+    }
+  }
+
+  .mw-checkbox-wrapper {
+    > div {
+      margin-left: 50%;
+      padding-left: 0;
+
+      .checkbox{
+        padding-left: 0;
+      }
+
+      label{
+        > * {
+          float: left;
+        }
+
+        &:after{
+          content: '';
+          clear: both;
+        }
+      }
+    }
+  }
+}

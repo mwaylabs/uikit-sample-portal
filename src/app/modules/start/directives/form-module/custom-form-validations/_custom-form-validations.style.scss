@@ -1,0 +1,18 @@
+.custom-form-validations {
+  .mw-input-wrapper {
+    .clearfix {
+      display: flex;
+
+      label,
+      .input-holder {
+        flex-basis: 50%;
+        padding-left: 0;
+      }
+    }
+
+    > div:last-child {
+      margin-left: 50%;
+      padding-left: 0;
+    }
+  }
+}

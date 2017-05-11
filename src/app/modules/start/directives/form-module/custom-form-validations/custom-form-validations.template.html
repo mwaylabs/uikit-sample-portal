@@ -1,0 +1,15 @@
+<form class="row">
+  <div class="custom-form-validations col-md-12">
+    <div mw-input-wrapper
+         label="Not XXX"
+         tooltip="Shows validation error when User enters XXX">
+      <input type="text" ng-model="mwInputWrapper" mw-model="model" sync-custom-validation match-value="XXX">
+    </div>
+
+    <div mw-input-wrapper
+         label="Async Validation"
+         tooltip="Shows validation error when User enters XXX, XYZ or ABC">
+      <input type="text" ng-model="mwInputWrapper" mw-model="model" async-custom-validation match-values="['ABC', 'XYZ', 'XXX']">
+    </div>
+  </div>
+</form>

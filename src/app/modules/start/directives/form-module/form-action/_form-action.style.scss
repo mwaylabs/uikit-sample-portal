@@ -1,0 +1,32 @@
+.form-action {
+  .mw-input-wrapper {
+    .clearfix {
+      display: flex;
+
+      label,
+      .input-holder {
+        flex-basis: 50%;
+        padding-left: 0;
+      }
+    }
+
+    > div:last-child {
+      margin-left: 50%;
+      padding-left: 0;
+    }
+  }
+
+  .mw-form-actions{
+    .btn-group{
+      display: flex;
+
+      .btn{
+        flex-basis: 50%;
+      }
+    }
+
+    .mw-spinner{
+      float: right;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<form class="row">
+  <div class="form-action col-md-12">
+    <div mw-input-wrapper
+         label="Required">
+      <input type="text" ng-model="mwRequiredInputWrapper" mw-model="model" required>
+    </div>
+
+    <div mw-input-wrapper
+         label="5 Letters"
+         tooltip="You have to enter at least 5 letters">
+      <input type="text" ng-model="mwErrorInputWrapper" mw-model="model" required ng-minlength="5">
+    </div>
+
+    <div mw-form-actions save="save()" cancel="cancel()"></div>
+  </div>
+</form>

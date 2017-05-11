@@ -6,6 +6,11 @@
         "title": "{{name}} works!",
         "body": "The UI-Kit was set up successfully and is working!. This is a 'mw-panel' and can hold of all sort of content"
       }
+    },
+    "formModuleDirectives": {
+      "customFormValidations": {
+        "validationError": "The entered value must not be \"{{value}}\""
+      }
     }
   }
 }
