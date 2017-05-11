@@ -1,0 +1,53 @@
+{
+  "hero": {
+    "entityName": "Helden",
+    "name": "Name",
+    "description": "Beschreibung",
+    "superPowers": "Super Kräfte",
+    "strongestSuperPower": "Stärkste Superkraft",
+    "tooltips": {
+      "heroName": "Die ist der Name des Heldes. Der Name muss eindeutig sein",
+      "buttonHelp": {
+        "nothingSelected": "Es wurde keine Held ausgewählt"
+      }
+    },
+    "index": {
+      "header": "Helden",
+      "newHero": "Held erstellen",
+      "deleteHero": "Löschen"
+    },
+    "new": {
+      "header": "Neuen Held erstellen"
+    },
+    "edit": {
+      "header": "{{name}} bearbeiten"
+    },
+    "modals": {
+      "heroDeleteConfirm": {
+        "hero": "Möchten Sie den Held \"{{name}}\" wirklich löschen?",
+        "heroes": "Möchten Sie die folgenden Helden wirklich löschen?"
+      }
+    },
+    "toasts": {
+      "serverResponses": {
+        "success": {
+          "created": {
+            "singular": "Der Held {{name}} wurde erfolgreich angelegt!",
+            "plural": "{{$count}} Helden wurden erfolgreich angelegt!"
+          },
+          "updated": {
+            "singular": "Der Held {{name}} wurde erfolgreich aktualisiert!",
+            "plural": "{{$count}} Helden wurden erfolgreich aktualisiert!"
+          },
+          "deleted": {
+            "singular": "Der Held {{name}} wurde erfolgreich gelöscht!",
+            "plural": "{{$count}} Helden wurden erfolgreich gelöscht!"
+          }
+        }
+      }
+    },
+    "validators": {
+      "notUnique": "Der Held mit dem Namen \"{{name}}\" existiert bereits"
+    }
+  }
+}

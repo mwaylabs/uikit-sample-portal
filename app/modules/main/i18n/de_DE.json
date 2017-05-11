@@ -1,0 +1,63 @@
+{
+  "main": {
+    "ok": "Ok",
+    "cancel": "Abbrechen",
+    "menu": {
+      "start": "Startseite",
+      "heroes": "Helden",
+      "superPowers": "Super Kräfte"
+    },
+    "notFound": {
+      "header": "Die angefragte Seite existiert leider nicht",
+      "descriptionL1": "Leider existiert die angefragte Seite nicht. Zumindest nicht in diesem Universum.",
+      "descriptionL2": "Sie können es entweder in einem parallel Universum versuchen oder",
+      "goToStart": "Zurück zur Startseite gehen"
+    },
+    "errors": {
+      "resourceNotFound": {
+        "singular": "Die von Ihnen angefragt Resource konnte nicht gefunden werden!",
+        "plural": "{{$count}} Resourcen die von Ihnen angefragt wurden konnten nicht gefunden werden!"
+      },
+      "serverCouldNotBeReached": {
+        "singular": "Der Server konnte nicht erreicht werden. Überprüfen Sie Ihre Internetverbindung"
+      }
+    },
+    "toasts": {
+      "serverResponses": {
+        "success": {
+          "created": {
+            "singular": "Der Eintrag wurde erfolgreich angelegt!",
+            "plural": "{{$count}} Einträge wurden erfolgreich angelegt!"
+          },
+          "updated": {
+            "singular": "Der Eintrag wurde erfolgreich aktualisiert!",
+            "plural": "{{$count}} Einträge wurden erfolgreich aktualisiert!"
+          },
+          "deleted": {
+            "singular": "Der Eintrag wurde erfolgreich gelöscht!",
+            "plural": "{{$count}} Einträge wurden erfolgreich gelöscht!"
+          }
+        },
+        "error": {
+          "unknown": "Die Anfrage war nicht erfolgreich, da der Server mit: \"{{reason}}\" geantworted hat!",
+          "resourceNotFound": {
+            "singular": "Die von Ihnen angefragt Resource konnte nicht gefunden werden!",
+            "plural": "{{$count}} Resourcen die von Ihnen angefragt wurden konnten nicht gefunden werden!"
+          },
+          "serverCouldNotBeReached": {
+            "singular": "Der Server konnte nicht erreicht werden. Überprüfen Sie Ihre Internetverbindung"
+          }
+        }
+      },
+      "offline": {
+        "title": "Keine Internet Verbindung",
+        "body": "Es konnte keine Verbindung mit dem Internet hergestellt werden."
+      },
+      "newPortalVersion": {
+        "title": "Neue App Version Verfügbar!",
+        "body": "Gute Nachrichten, eine neue MW-UI Portal Version steht für Sie bereit!",
+        "action": "Starten Sie die Applikation erneut um diese zu erhalten"
+      }
+    }
+  }
+}

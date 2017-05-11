@@ -1,0 +1,53 @@
+{
+  "hero": {
+    "entityName": "Heroes",
+    "name": "Name",
+    "description": "Description",
+    "superPowers": "Superpowers",
+    "strongestSuperPower": "Strongest Super Power",
+    "tooltips": {
+      "heroName": "This is the name of the hero. The name must be unique",
+      "buttonHelp": {
+        "nothingSelected": "No hero has been selected"
+      }
+    },
+    "index": {
+      "header": "Heroes",
+      "newHero": "Create hero",
+      "deleteHero": "Delete"
+    },
+    "new": {
+      "header": "Create a new Hero"
+    },
+    "edit": {
+      "header": "Edit {{name}}"
+    },
+    "modals": {
+      "heroDeleteConfirm": {
+        "hero": "Do you really want to delete the hero \"{{name}}\"?",
+        "heroes": "Do you really want to delete the following heroes?"
+      }
+    },
+    "toasts": {
+      "serverResponses": {
+        "success": {
+          "created": {
+            "singular": "The hero has been successfully created!",
+            "plural": "{{$count}} heroes have been successfully created!"
+          },
+          "updated": {
+            "singular": "The heo has been successfully updated!",
+            "plural": "{{$count}} heroes have been successfully updated!"
+          },
+          "deleted": {
+            "singular": "The hero has been successfully deleted!",
+            "plural": "{{$count}} heroes have been successfully deleted!"
+          }
+        }
+      }
+    },
+    "validators": {
+      "notUnique": "The hero with the name \"{{name}}\" does already exist"
+    }
+  }
+}

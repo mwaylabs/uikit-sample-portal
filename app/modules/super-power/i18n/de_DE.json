@@ -1,0 +1,63 @@
+{
+  "superPower": {
+    "entityName": "Superkräfte",
+    "name": "Name",
+    "icon": "Icon",
+    "superPowers": "Superkräfte",
+    "tooltips": {
+      "icon": "Icon das die Superkraft repräsentiert. Es können alle icons verwendet werden die Font Awesome anbietet",
+      "buttonHelp": {
+        "nothingSelected": "Es wurde keine Superkraft ausgewählt",
+        "appliedSelected": "Mindestens einer der ausgewählten Superkräft wurde für einen Held ausgewählt und kann daher nicht gelöscht werden."
+      }
+    },
+    "index": {
+      "header": "Superkräfte",
+      "newSuperPower": "Superkraft erstellen",
+      "deleteSuperPower": "Löschen"
+    },
+    "new": {
+      "header": "Neue Superkraft erstellen"
+    },
+    "edit": {
+      "header": "Edit {{name}}"
+    },
+    "form": {
+      "iconDesc": "Namen des Icons eingeben das verwendet werden soll. Es können alle Icons von Font Awesome verwendet werden z.B. fa-taxi",
+      "iconPreview": "Preview of the icon"
+    },
+    "modals": {
+      "superPowerDeleteConfirm": {
+        "superPower": "Möchten Sie die Superkraft \"{{name}}\" wirklich löschen?",
+        "superPowers": "Möchten Sie die folgenden Superkräfte wirklich löschen?"
+      },
+      "selector": {
+        "title": "Superkraft auswählen"
+      }
+    },
+    "superPowerSelectorBtn": {
+      "selectSuperPower": "Superkraft auswählen",
+      "selectSuperPowers": "Superkräfte auswählen",
+      "superPowerIsSelected": "Superkraft \"{{name}}\" wurde ausgewählt",
+      "superPowersAreSelected": "{{count}} Superkräfte wurden ausgewählt"
+    },
+    "toasts": {
+      "serverResponses": {
+        "success": {
+          "created": {
+            "singular": "Die Superkraft {{name}} wurde erfolgreich angelegt!",
+            "plural": "{{$count}} Superkräfte wurden erfolgreich angelegt!"
+          },
+          "updated": {
+            "singular": "Die Superkraft {{name}} wurde erfolgreich aktualisiert!",
+            "plural": "{{$count}} Superkräfte wurden erfolgreich aktualisiert!"
+          },
+          "deleted": {
+            "singular": "Die Superkraft {{name}} wurde erfolgreich gelöscht!",
+            "plural": "{{$count}} Superkräfte wurden erfolgreich gelöscht!"
+          }
+        }
+      }
+    }
+  }
+}

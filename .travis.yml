@@ -1,0 +1,40 @@
+language: node_js
+node_js:
+- 6.9.2
+install: echo "Deploy mw-uikit sample portal"
+env:
+  global:
+  - GH_REF=github.com/mwaylabs/uikit-sample-portal
+  - secure: Fxp3E31iBAVJ6Wp9Fvj5qgDFIxMclcLRwddlErcHQxEsYwDzlVDArfJmfyzHv1EpHIlw9c5GTwuWGjmK5ZALTjBFRFFpZUhyHBwCjmU9HnStHtuy71B7buwvRLkevdDNNODBCX14vgxoU6D/IBNJJHviS1vH4cTRrKnMAsYVpYY2RPluhwcQTzU1cCDfSiaOHPJ1OXvzzJhn5QlWbsNGOiiTBemEPaDjvxSjF7IbWHXBU22Nn8TK+/ne5FU8Sjgf4fVx7FwLJ9pMk58c3BpNSJbw9ugVee3okwnOTq73NColgLDr/SJzEoMejLOcjWWeyHJYUqxun+jyHBawXV9ZNDAKk1mgECqUHpe2dbWIkR331PVqoXYyOkXi8KLhDUkVumZcE2gnvkBJmQ9n/O3H7m+J6RIqA4pXrHxE2MlxDlUnowKNaftRwx9cnhPz1D3YWZlSzz/BdG91+e44/57Pfl3VmLOXnAG7Cl8Ey5eYcGvQRBAGX3OGu3VQL0jc1HCWx6zTP8eWVpybuq8OQv+CyGJG9nvhnemPpro5ymJdcTF4KXL5afoLhbCG6Z30lF7T2gT2F9B5kA89zhuqNb3QjXonL+lSNLQrXi+91A2yxKvisHKvpFSVx+O4pRXAcuQWuD6Aaam7LbwxyCTMY2h3N1kRzlVWal+v41rUUqmDHNQ=
+before_deploy:
+- ./bin/bundle-server.sh
+- ./bin/build-portal.sh
+deploy:
+- provider: s3
+  access_key_id: AKIAJTMP6OVMWJ2AE7UQ
+  secret_access_key:
+    secure: "h5fqRXE1kz6v+1dFduk8Te5SqtSwg+zDEzFDRYG2hpAd4OhfJrb6rf8A3NwPl1/WAnrO7tHRMzqzT8j3NL/aWnqGHQ0MGrsvmtYIDR3oYdOEDCaYsndZljie5bn2fNP0sJRs3Z3N/15yhNOvAOQxw+sJpM63nKV30hs7LXiBJ0EvKkSDQtIihBXhn8sRwGrjF9avI0YPHaSiloucT+AoMOyW8fGEL/RhYdMOTeSBlInDlrU8nRe/0Gp1sj0AY8AJdcdyfFwyQuet8OeMWe3oD61CQC81erRRu3tXcTki2Qf9z7Hl8ozVoxCc8sJYn0GNASlYoxKDr+gj/3LXTRAKO+XdSWW9JBo66dIVUOX6BcNT+/a1QKVHjevhOfaLNDlQC6n1ZGqdCHwU/2YgB4pIO8H1UKUTTaXeRZluK4RQ4QVFKVaWVX3jpFVrusUuwhbypQC/yM4gJZVIJpg8U/BOI6SlkY8+cw/sT34yhVvb0LejUxhVz5RfStpg2lXmzZ0hu56vA1RVyMSuTfjvKIXCFWuq48cZovSRIvZmQC0hxqV/TV+JvbSHUmlVTLRKQry3AHfW8yhzlSIOaNUmlWOQ5r5d+PUgY02mSIHCGvyYYJtVM49pawqFDUfT6lDCdSuU1xIVZSYxc0xMkd82+wRYYdmfleLH2In6TrIW5AwvzQ0="
+  bucket: mw-uikit
+  region: eu-central-1
+  local_dir: aws_upload
+  skip_cleanup: true
+  on:
+    branch: master
+- provider: codedeploy
+  access_key_id: AKIAJTMP6OVMWJ2AE7UQ
+  secret_access_key:
+    secure: "h5fqRXE1kz6v+1dFduk8Te5SqtSwg+zDEzFDRYG2hpAd4OhfJrb6rf8A3NwPl1/WAnrO7tHRMzqzT8j3NL/aWnqGHQ0MGrsvmtYIDR3oYdOEDCaYsndZljie5bn2fNP0sJRs3Z3N/15yhNOvAOQxw+sJpM63nKV30hs7LXiBJ0EvKkSDQtIihBXhn8sRwGrjF9avI0YPHaSiloucT+AoMOyW8fGEL/RhYdMOTeSBlInDlrU8nRe/0Gp1sj0AY8AJdcdyfFwyQuet8OeMWe3oD61CQC81erRRu3tXcTki2Qf9z7Hl8ozVoxCc8sJYn0GNASlYoxKDr+gj/3LXTRAKO+XdSWW9JBo66dIVUOX6BcNT+/a1QKVHjevhOfaLNDlQC6n1ZGqdCHwU/2YgB4pIO8H1UKUTTaXeRZluK4RQ4QVFKVaWVX3jpFVrusUuwhbypQC/yM4gJZVIJpg8U/BOI6SlkY8+cw/sT34yhVvb0LejUxhVz5RfStpg2lXmzZ0hu56vA1RVyMSuTfjvKIXCFWuq48cZovSRIvZmQC0hxqV/TV+JvbSHUmlVTLRKQry3AHfW8yhzlSIOaNUmlWOQ5r5d+PUgY02mSIHCGvyYYJtVM49pawqFDUfT6lDCdSuU1xIVZSYxc0xMkd82+wRYYdmfleLH2In6TrIW5AwvzQ0="
+  deployment_group: uikitSamplePortalInstance
+  region: eu-central-1
+  bucket: mw-uikit
+  key: latest.zip
+  bundle_type: zip
+  application: UikitSamplePortal
+  skip_cleanup: true
+  on:
+    branch: master
+- provider: script
+  script: ./bin/release-on-gh-pages.sh
+  skip_cleanup: true
+  on:
+    branch: master

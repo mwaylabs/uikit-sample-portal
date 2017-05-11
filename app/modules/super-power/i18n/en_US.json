@@ -1,0 +1,63 @@
+{
+  "superPower": {
+    "entityName": "Super Powers",
+    "name": "Name",
+    "icon": "Icon",
+    "superPowers": "Superpowers",
+    "tooltips": {
+      "icon": "This is the icon for the super power. You can use all icons that font awesome provides",
+      "buttonHelp": {
+        "nothingSelected": "No super power has been selected",
+        "appliedSelected": "At least one selected super power is applied on a hero. Therefore it can not be deleted."
+      }
+    },
+    "index": {
+      "header": "Super Powers",
+      "newSuperPower": "Create Super Power",
+      "deleteSuperPower": "Delete"
+    },
+    "new": {
+      "header": "Create a new Super Power"
+    },
+    "edit": {
+      "header": "Edit {{name}}"
+    },
+    "form": {
+      "iconDesc": "Choose an icon for the super power. You can use all Font Awesome icons e.g. fa-taxi",
+      "iconPreview": "Preview of the icon"
+    },
+    "modals": {
+      "superPowerDeleteConfirm": {
+        "superPower": "Do you really want to delete the super power \"{{name}}\"?",
+        "superPowers": "Do you really want to delete the following super powers?"
+      },
+      "selector": {
+        "title": "Select a super power"
+      }
+    },
+    "superPowerSelectorBtn": {
+      "selectSuperPower": "Select a super power",
+      "selectSuperPowers": "Select super powers",
+      "superPowerIsSelected": "Super power \"{{name}}\" is selected",
+      "superPowersAreSelected": "{{count}} super powers are selected"
+    },
+    "toasts": {
+      "serverResponses": {
+        "success": {
+          "created": {
+            "singular": "The super power {{name}} has been successfully created!",
+            "plural": "{{$count}} super powers have been successfully created!"
+          },
+          "updated": {
+            "singular": "The super power {{name}} has been successfully updated!",
+            "plural": "{{$count}} super powers have been successfully updated!"
+          },
+          "deleted": {
+            "singular": "The super power {{name}} has been successfully deleted!",
+            "plural": "{{$count}} super powers have been successfully deleted!"
+          }
+        }
+      }
+    }
+  }
+}

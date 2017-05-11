@@ -1,0 +1,54 @@
+{
+  "main": {
+    "ok": "Ok",
+    "cancel": "Cancel",
+    "menu": {
+      "start": "Start View",
+      "heroes": "Heroes",
+      "superPowers": "Super Kräfte"
+    },
+    "notFound": {
+      "header": "The page does not exist",
+      "descriptionL1": "Unfortunately the page that you requested does not exist. At least not in this universe.",
+      "descriptionL2": "You can either try to look for that page in a parallel universe or",
+      "goToStart": "Go back to Start"
+    },
+    "toasts": {
+      "serverResponses": {
+        "success": {
+          "created": {
+            "singular": "The item has been successfully created!",
+            "plural": "{{$count}} items have been successfully created!"
+          },
+          "updated": {
+            "singular": "The item has been successfully updated!",
+            "plural": "{{$count}} items have been successfully updated!"
+          },
+          "deleted": {
+            "singular": "The item has been successfully deleted!",
+            "plural": "{{$count}} items have been successfully deleted!"
+          }
+        },
+        "error": {
+          "unknown": "The request was not successful because the server returned: {{reason}}",
+          "resourceNotFound": {
+            "singular": "The resource could not be found on the server!",
+            "plural": "{{$count}} resources could not be found on the server!"
+          },
+          "serverCouldNotBeReached": {
+            "singular": "The server could not be reached. Check if you have an active connection to the internet."
+          }
+        }
+      },
+      "offline": {
+        "title": "No Internet Connection",
+        "body": "It looks like that you lost the connection to the internet. Make sure to have an active connection."
+      },
+      "newPortalVersion": {
+        "title": "A new Version is available!",
+        "body": "Good news, a new version of the MW-UI Portal is available!",
+        "action": "Restart the applikcation to get the latest version."
+      }
+    }
+  }
+}
