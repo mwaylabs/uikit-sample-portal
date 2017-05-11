@@ -45,5 +45,5 @@ fi
 # add node to startup
 hasRc=`grep "su -l $USER" /etc/rc.local | cat`
 if [ -z "$hasRc" ]; then
-    sudo sh -c "echo 'su -l $USER -c \"cd ~/mw-uikit;sh ./run.sh\"' >> //etc/rc.local"
+    sudo sh -c "echo 'su -l $USER -c \"cd ~/mw-uikit/scripts;sh ./run.sh\"' >> //etc/rc.local"
 fi
