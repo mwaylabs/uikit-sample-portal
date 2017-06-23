@@ -104,11 +104,13 @@
 
       <div mw-menu-top-entries right="true">
         <div mw-menu-entry
-             icon="fa-language">
+             icon="fa-language"
+             is-active="false">
           <div ng-repeat="locale in ctrl.locales">
             <div mw-menu-entry
                  label="{{locale.name}}"
-                 action="ctrl.setLocale(locale.id)">
+                 action="ctrl.setLocale(locale.id)"
+                 is-active="ctrl.isLocaleActive(locale.id)">
             </div>
           </div>
         </div>

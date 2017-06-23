@@ -7,6 +7,10 @@ angular.module('mwPortal.Main')
       window.localStorage.setItem('locale', id);
     };
 
+    this.isLocaleActive = function(id){
+      return i18n.getActiveLocale().id === id;
+    };
+
     this.getCurrentYear = function () {
       return (new Date()).getFullYear();
     };
